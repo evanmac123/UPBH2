@@ -1,0 +1,147 @@
+body{
+  @include breakpoint(medium) {
+    position:absolute;
+    left:0;
+    top:0;
+  }
+  @include breakpoint(large) {
+    position:relative;
+  }
+}
+
+.container {
+
+  @include breakpoint(large up) {
+      margin-top: 8.7em;
+  }
+  @include breakpoint(medium down) {
+    margin-top: 46px;
+  }
+}
+
+.entry-content {
+  
+  a[href^="tel:"] {
+    color: $dark-gray;
+    text-decoration: none;
+  }
+}
+
+.main-wrap{
+  @include grid-row();
+  @include breakpoint(small) {
+    padding:0px 15px;
+  }
+}
+
+.main-content {
+  // default 2 column
+
+  // 1 column
+  .full-width.main-wrap & {
+    @include breakpoint(medium) {
+      @include grid-column(12);
+    }
+  }
+
+  // 2 column sidebar left
+  .sidebar-left.main-wrap & {
+    @include breakpoint(medium) {
+      @include grid-column(9);
+      @include grid-col-pos(3);
+    }
+  }
+}
+
+.sidebar {
+
+  // default 2 column
+  @include grid-column(12);
+  @include breakpoint(medium) {
+    @include grid-column(4);
+    margin-top: 1rem;
+  }
+
+  // 2 column sidebar left
+  .sidebar-left.main-wrap & {
+    @include breakpoint(medium) {
+      @include grid-column(3);
+      @include grid-col-pos(-9);
+      margin-top: 1rem;
+    }
+  }
+}
+
+.post__list-single{
+  border: 1px solid $white-gray;
+  margin-bottom:2em;
+  cursor:pointer;
+
+  h2{
+    padding: 0;
+    @include underline;
+    display: inline-block;
+    color:$primary-color;
+    transition: all .45s;
+  }
+
+  &:hover{
+    .post-image{
+      background-position: center;
+    }
+    h2{
+      color:$light-gray;
+
+      &:after{
+        transform-origin: right;
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .post-image{
+      background-position: right;
+      object-fit: cover;
+      display:block;
+      transition: all .45s;
+      @include breakpoint(small){
+        height: 160px;
+      }
+      @include breakpoint(large){
+        height: 320px;
+      }
+  }
+
+  .content{
+      padding: 2em;
+  }
+}
+
+  .off-canvas-content {
+    @include breakpoint(medium down){
+    width:100%;
+    float: left;
+    }
+    @include breakpoint(large){
+    float: none;
+    }
+  }
+
+#mobile-logo {
+    
+    padding-bottom: 25px;
+    padding-top: 30px;
+    
+    img {
+        display: block;
+        margin: auto;
+    }
+}
+
+div.ms-bullet.ms-bullet-selected {
+    background: $primary-color;
+}
+
+.updated {
+    margin-bottom: 15px;
+}
