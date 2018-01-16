@@ -18,29 +18,28 @@
   // placeholder
 }
 
-.call-bar{
-  background-color:$primary-color;
-  width:100%;
-  position:fixed;
-  top:0;
-  display:block;
+.call-bar {
+  background-color: $primary-color;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: block;
   height: 36px;
   z-index: 10;
-  li{
-    float:right;
-    a{
-      color:white;
-      cursor:none;
+
+  li {
+    float: right;
+
+    a {
+      color: white;
+      cursor: none;
     }
   }
 }
 
-
 .site-header {
-  position: fixed;
   width: 100%;
-  top: 36px;
-  background-color: white;
+  background-color: $secondary-color;
   z-index: 10;
   height: $header-top-length;
   @include breakpoint(medium down) {
@@ -52,7 +51,6 @@
 // main styling for all top right nav
 // construction happens in navigation.php, custom walker classes, and header
 //mobile-menu
-
 
 .site-title-bar {
   background-color: $white;
@@ -88,24 +86,31 @@ ul {
     margin-top: 25px;
   }
 }
-
 // Anchor fix for sticky top menu hiding content
-
-#adm, #med, #acd, #fam, #rec, #adv, #iop, #exp, #cul, #dog, #staff-top {
-    padding-top: 200px;
-    margin-top: -200px;
-    -webkit-background-clip: content-box;
-    background-clip: content-box;
+#acd,
+#adm,
+#adv,
+#cul,
+#dog,
+#exp,
+#fam,
+#iop,
+#med,
+#rec,
+#staff-top {
+  padding-top: 200px;
+  margin-top: -200px;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
 }
-
 //desk-top
-
 .site-navigation {
-  color: $medium-gray;
+  color: $white;
   z-index: 1;
   top: 0;
-  background-color: #fefefe;
+  background-color: $secondary-color;
   width: 100%;
+  position: fixed;
   @include breakpoint(small only) {
     padding: 0; // prevents container visibility on small screens
   }
@@ -114,8 +119,7 @@ ul {
     padding: 0;
 
     img {
-      width: 140px;
-      height: 140px;
+      width: 200px;
       padding: 5px;
       margin-left: 5px;
     }
@@ -123,15 +127,13 @@ ul {
 
   .top-bar-left {
     float: left;
-    z-index:20;
-    position:fixed;
+    z-index: 20;
   }
 
   .top-bar-right {
-    position: fixed;
-    padding: 40px 0 0 0;
-    top: 36px;
-    right: 0;
+    padding: 40px 0 0;
+    float: right;
+    width: 80%;
   }
 
   .top-bar-r {
@@ -152,7 +154,7 @@ ul {
 
     li {
       &:before {
-        color: $secondary-color;
+        color: $white;
         float: left;
         margin: 7px 0 0;
         width: 1em;
@@ -181,15 +183,14 @@ ul {
   }
 
   .program-bar-r {
-    width: 90%;
     float: right;
     text-align: right;
     margin-top: 1em;
     background-color: transparent;
 
     li.top-level:nth-child(2) {
-        border-right: 0;
-      }
+      border-right: 0;
+    }
 
     .green-block {
       background-color: #5c8727;
@@ -253,9 +254,10 @@ ul {
       padding: 10px 0;
       border-right: 1px solid $secondary-color;
       position: relative;
+      text-transform: uppercase;
 
       a {
-        color:$light-gray;
+        color: $white;
         transition: 0.45s all;
         top: 50%;
         transform: translateY(-50%);
@@ -264,12 +266,12 @@ ul {
         display: inherit;
 
         &:hover {
-          color: $primary-color;
+          color: $white;
         }
       }
 
       .sub-menu-0 {
-        top: 192px;
+        top: 156px;
         display: none;
         right: auto;
         left: 0;
@@ -277,14 +279,17 @@ ul {
         width: 100%;
         position: fixed;
         padding: 40px;
-        background-color: $secondary-color;
-        color: $white;
+        background-color: $white;
+        color: $secondary-color;
         z-index: 6;
         margin-left: 0;
         text-align: left;
         background-image: url("../images/menu.jpg");
         background-size: cover;
         height: 290px;
+        -webkit-box-shadow: $dropshadow;
+        -moz-box-shadow: $dropshadow;
+        box-shadow: $dropshadow;
 
         .sub-menu-closer {
           @include grid-column(2);
@@ -292,8 +297,8 @@ ul {
           float: left;
           width: 30px;
           height: 30px;
-          position:fixed;
-          right:4%;
+          position: fixed;
+          right: 4%;
           background-repeat: no-repeat;
           background-size: contain;
           background-image: url('../images/icons/close.png');
@@ -308,7 +313,6 @@ ul {
           @include grid-column(5);
           float: left;
           margin-top: -16px;
-
 
           .sub-menu-title {
             font-size: 1.6em;
@@ -362,7 +366,7 @@ ul {
             left: 58%;
             top: 232px;
             height: 270px;
-            padding: 0px 0 0 100px;
+            padding: 0 0 0 100px;
             -webkit-transition: all 0.45s;
             transition: all 0.45s;
             opacity: 0;
@@ -377,8 +381,7 @@ ul {
               font-size: 0.94em;
               line-height: 1.45em;
               transition: all 0.45s;
-
-              float:none;
+              float: none;
 
               &:hover {
                 opacity: 0.7;
@@ -443,6 +446,7 @@ ul {
   }
 }
 // WP post navigation
+
 .post-navigation {
   @include clearfix;
 }
@@ -451,10 +455,11 @@ ul {
   float: left;
   padding: 20px 0;
   transition: all 0.45s;
-  max-width:300px;
+  max-width: 300px;
   font-weight: 700;
-  a{
-  color: $primary-color;
+
+  a {
+    color: $primary-color;
   }
 
   &:hover {
@@ -468,11 +473,12 @@ ul {
   padding: 20px 0;
   float: right;
   transition: all 0.45s;
-  max-width:300px;
+  max-width: 300px;
   text-align: right;
   font-weight: 700;
-  a{
-  color: $primary-color;
+
+  a {
+    color: $primary-color;
   }
 
   &:hover {

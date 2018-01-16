@@ -53,14 +53,6 @@ ga('send', 'pageview');
 				<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 			</div>
 		<nav class="site-navigation top-bar" role="navigation">
-
-			<div class="top-bar-right">
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
-				<?php foundationpress_top_bar_r(); ?>
-				<?php foundationpress_program_bar_r(); ?>
-			</div>
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -69,10 +61,18 @@ ga('send', 'pageview');
 						if ( has_custom_logo() ) {
                             the_custom_logo();
                         } else { ?>
-                            <img width="130" height="130" src="http://www.muirwoodteen.com/wp-content/uploads/2017/07/cropped-logo-1-3.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" />
+                            <img src="http://upbh2/wp-content/uploads/2018/01/logo-main-1.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" />
                         <?php } ?>
                     </a>
 				</div>
+
+			<div class="top-bar-right">
+				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
+					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+				<?php endif; ?>
+				<?php foundationpress_top_bar_r(); ?>
+				<?php foundationpress_program_bar_r(); ?>
+			</div>
 			</div>
 		</nav>
 	</div>

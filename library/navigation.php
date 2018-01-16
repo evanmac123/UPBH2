@@ -120,8 +120,6 @@ if ( ! function_exists( 'foundationpress_mobile_nav' ) ) {
 */
 function muirwoods_logo() {
     add_theme_support('custom-logo', array(
-			'height'      =>130,
-			'width'       => 130,
 		));
 }
 
