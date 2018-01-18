@@ -64,7 +64,7 @@ $black: #0a0a09;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: #877B77;
-$body-font-family: 'Open Sans', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Lato', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -152,7 +152,7 @@ $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $dark-gray;
-$anchor-color-hover: scale-color($primary-color, $lightness: -14%);
+$anchor-color-hover: scale-color($secondary-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
@@ -602,8 +602,8 @@ $titlebar-background: $light-gray;
 $titlebar-color: $body-font-color;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $body-font-color;
-$titlebar-icon-color-hover: $black;
+$titlebar-icon-color: $white;
+$titlebar-icon-color-hover: $white-gray;
 $titlebar-icon-spacing: 0.25rem;
 
 // 36. Tooltip

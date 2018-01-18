@@ -30,10 +30,33 @@
 @mixin menu-item{
   font-size: 0.9em;
   font-weight: 400;
-  border-bottom: 1px $secondary-color solid;
+  border-bottom: 1px $white solid;
   line-height: 1.2em;
   padding-top: .5em;
   padding-bottom: .5em;
+}
+@mixin down-arrow{
+  &:after {
+    content: "";
+    height: 7px;
+    width: 7px;
+    border: 1px solid $secondary-color;
+    border-width: 1px 1px 0 0;
+    transform: rotate(45deg);
+    display: block;
+    transition: all .3s;
+    display: inline-block;
+    margin-left: 4px;
+    border-color: $secondary-color;
+  }
+  &:hover {
+    opacity: 0.7;
+
+    &:after {
+      transform: rotate(135deg);
+      transition: all .3s;
+    }
+  }
 }
 
 @mixin shadow{

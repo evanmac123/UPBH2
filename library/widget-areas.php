@@ -19,6 +19,16 @@ function foundationpress_sidebar_widgets() {
 	));
 
 	register_sidebar(array(
+		'id' => 'header-call-number',
+		'name' => __( 'Header Call Bar', 'foundationpress' ),
+		'description' => __( 'Use a Text Block to put in a phone number', 'foundationpress' ),
+		'before_widget' => '<article id="%1$s" class=" widget %2$s">',
+		'after_widget' => '</article>',
+		'before_title' => '<h6>',
+		'after_title' => '</h6>',
+	));
+
+	register_sidebar(array(
 		'id' => 'upper-footer-widgets',
 		'name' => __( 'Upper Footer widgets', 'foundationpress' ),
 		'description' => __( 'Drag sponser images to this footer container', 'foundationpress' ),

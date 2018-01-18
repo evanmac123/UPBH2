@@ -12,7 +12,7 @@ body{
 .container {
 
   @include breakpoint(large up) {
-      margin-top: 8.7em;
+      margin-top: 2em;
   }
   @include breakpoint(medium down) {
     margin-top: 46px;
@@ -20,7 +20,7 @@ body{
 }
 
 .entry-content {
-  
+
   a[href^="tel:"] {
     color: $dark-gray;
     text-decoration: none;
@@ -128,10 +128,10 @@ body{
   }
 
 #mobile-logo {
-    
+
     padding-bottom: 25px;
     padding-top: 30px;
-    
+
     img {
         display: block;
         margin: auto;

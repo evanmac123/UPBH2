@@ -1,16 +1,16 @@
 h1 {
   text-transform: uppercase;
-  font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+  font-family: $body-font-family;
 }
 
 h3, h5, h6 {
   color: $light-gray;
-  font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+  font-family: $body-font-family;
 }
 
 h2, h4 {
     color: $primary-color;
-    font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+    font-family: $body-font-family;
 }
 
 .home__split-title h3 {
@@ -85,13 +85,13 @@ article ul li {
   list-style-type: circle;
 }
 
-ul li:before {
-  color: $primary-color;
-  float: left;
-  margin: 0 0 0 -1em;
-  width: 1em;
-  content: '\25AA';
-}
+// ul li:before {
+//   color: $primary-color;
+//   float: left;
+//   margin: 0 0 0 -1em;
+//   width: 1em;
+//   content: '\25AA';
+// }
 
 input::-webkit-input-placeholder {
   /* Chrome */
@@ -188,7 +188,7 @@ input:-moz-placeholder {
 }
 
 .home__slider h2.home-slider-heading {
-    font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+    font-family: $body-font-family;
     font-size: 40px;
     color: $primary-color;
     text-align: left;
@@ -200,7 +200,7 @@ input:-moz-placeholder {
 }
 
 .home__slider h2.home-slider-heading-mobile {
-    font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+    font-family: $body-font-family;
     font-size: 20px;
     color: $primary-color;
     text-align: left;

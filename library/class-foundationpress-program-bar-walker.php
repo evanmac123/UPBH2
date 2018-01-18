@@ -28,7 +28,7 @@ if ( ! class_exists( 'Foundationpress_Program_Bar_Walker' ) ) :
 	         global $description;
 					 global $title;
            if($depth === 0){
-	         $output .= "\n$indent<ul class='sub-menu-$depth'><div class='sub-menu-closer'></div><div class='sub-menu-label'><div class='sub-menu-title'>".$title."</div> <div class='sub-menu-description'>".$description."</div></div><div class='sub-menu-items'>\n";
+	         $output .= "\n$indent<ul class='sub-menu-$depth'><div class='sub-menu-closer'></div><div class='sub-menu-items'>\n";
           }
           elseif($depth === 1){
             $output .= "\n$indent<ul class='sub-menu-$depth'><div class='sub-menu-items'>\n";
