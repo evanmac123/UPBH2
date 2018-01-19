@@ -43,9 +43,6 @@ require_once( 'library/entry-meta.php' );
 /** Enqueue scripts */
 require_once( 'library/enqueue-scripts.php' );
 
-/** Custom Post Type:Staff */
-require_once( 'library/custom-post-types.php' );
-
 /** Add theme support */
 require_once( 'library/theme-support.php' );
 

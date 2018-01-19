@@ -6,7 +6,7 @@ get_header(); ?>
 	<div class="home">
 		<section>
 			<div class="home__slider hide-for-small-only">
-				<?php the_field("home-slider"); ?>
+				<?php the_field("main-slider"); ?>
 			</div>
             <div class="home__slider show-for-small-only">
                 <img src="/wp-content/uploads/2017/08/dragonfly.jpg" />
@@ -16,53 +16,46 @@ get_header(); ?>
             </div>
 		</section>
 
-		<section class="home__split">
+		<section class="home__program">
+			<div class="dark divider">
+				programs
+			</div>
+			<div class="row ">
+				<h1><?php the_field("program-headline"); ?></h1>
+			</div>
+			<div class="row ">
+				<p><?php the_field("program-paragraph"); ?></p>
+			</div>
 			<div class="row expanded large-collapsed">
-				<a href="<?php the_field("home-split-left-link"); ?>" class="large-6 column home__split-column" style="background-image:url(<?php the_field("home-split-left-background-img");?>)">
-					<div class="home__split-title">
-						<?php the_field("home-split-left-title"); ?>
+				<div class="home__program-left large-6 column" style="background-image:url('<?php  the_field("program-left-background");?>')">
+					<img class="home__program-icon" src="<?php  the_field("program-left-icon");?>">
+					<div class=home__program-title>
+						<?php  the_field("program-left-title");?>
 					</div>
-					<div class="home__split-description">
-						<?php the_field("home-split-left-description"); ?>
+					<div class="home__program-link">
+						<a href="<?php  the_field("program-left-link");?>">
+							learn more
+						</a>
 					</div>
-				</a>
-				<a href="<?php the_field("home-split-right-link"); ?>" class="large-6 column  home__split-column" style="background-image:url(<?php the_field("home-split-right-background-img");?>)">
-					<div class="home__split-title">
-						<?php the_field("home-split-right-title"); ?>
-					</div>
-					<div class="home__split-description">
-						<?php the_field("home-split-right-description"); ?>
-					</div>
-				</a>
+				</div>'<div class="row expanded large-collapsed">
+					<div class="home__program-right large-6 column" style="background-image:url('<?php  the_field("program-right-background");?>')">
+						<img class="home__program-icon" src="<?php  the_field("program-right-icon");?>">
+						<div class=home__program-title>
+							<?php  the_field("program-right-title");?>
+						</div>
+						<div class="home__program-link">
+							<a href="<?php  the_field("program-right-link");?>">
+								learn more
+							</a>
+						</div>
+					</div>'
+
 			</div>
 		</section>
 
-		<section class="home__videos" style="background-image:url('<?php the_field("home-videos-background-img"); ?> ');">
-			<div class="main-wrap">
-				<div class="row">
-				<h2 class="home__videos-title column large-11"> <?php the_field("home-videos-title");  ?> </h2>
-				<p class="home__videos-description column large-10">
-					<?php the_field("home-videos-description"); ?> </p>
-				</div>
-					<div class="row">
-				<div class="large-6 column">
-					<?php the_field("home-videos-left-video"); ?>
-					<div class="home__videos-split-description">
-					<?php the_field("home-videos-left-description"); ?>
-					</div>
-				</div>
-				<div class="large-6 column">
-					<?php the_field("home-videos-right-video"); ?>
-					<div class="home__videos-split-description">
-					<?php the_field("home-videos-right-description"); ?>
-				</div>
-				</div>
-			</div>
-				<div class="row">
-				<a class="button-green" href="<?php the_field("home-videos-button"); ?>">
-					<?php the_field("home-videos-button-text"); ?>
-				</a>
-			</div>
+		<section class="home__program">
+			<div class="row expanded">
+
 			</div>
 		</section>
 

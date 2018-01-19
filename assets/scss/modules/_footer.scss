@@ -40,37 +40,6 @@
       font-size: 24px;
     }
 
-    .divider {
-      font-family: $secondary-font-family;
-      width: 100%;
-      font-size: 20px;
-      padding: 0;
-      position: relative;
-      margin: 30px;
-
-      &:after {
-        background-image: url("../images/right-divider.svg");
-        width: 89px;
-        height: 2px;
-        content: "";
-        display: inline-block;
-        position: relative;
-        right: -1em;
-        top: -3px;
-      }
-
-      &:before {
-        background-image: url("../images/left-divider.svg");
-        width: 89px;
-        height: 2px;
-        content: "";
-        display: inline-block;
-        position: relative;
-        left: -1em;
-        top: -3px;
-      }
-    }
-
     .photo-overlay {
       background-color: rgba(100, 134, 171, .75);
       position: absolute;

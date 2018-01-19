@@ -1,6 +1,7 @@
 h1 {
   text-transform: uppercase;
-  font-family: $body-font-family;
+  font-family: $secondary-font-family;
+  color: $light-blue;
 }
 
 h3, h5, h6 {
@@ -13,18 +14,44 @@ h2, h4 {
     font-family: $body-font-family;
 }
 
-.home__split-title h3 {
-    color: $white;
-    font-size: 1.3rem;
+.divider{
+  font-family: $secondary-font-family;
+  width: 100%;
+  font-size: 20px;
+  padding: 0;
+  position: relative;
+  margin: 30px;
+
+  &:before {
+    background-image: url("../images/left-divider.svg");
+    width: 89px;
+    height: 2px;
+    content: "";
+    display: inline-block;
+    position: relative;
+    left: -1em;
+    top: -3px;
+  }
+
+  &:after {
+    background-image: url("../images/right-divider.svg");
+    width: 89px;
+    height: 2px;
+    content: "";
+    display: inline-block;
+    position: relative;
+    right: -1em;
+    top: -3px;
+  }
 }
 
-.home__testimonials h3 {
-        color: $primary-color;
-        font-size: 2.3rem;
-}
-
-.home__links-title h4 {
-    color: $white;
+.divider.dark{
+  &:before {
+    background-image: url("../images/left-dark-divider.svg");
+  }
+  &:after {
+    background-image: url("../images/right-dark-divider.svg");
+  }
 }
 
 .entry-title{
@@ -149,38 +176,6 @@ input:-moz-placeholder {
     width: 10px;
     height: 10px;
     transform: translate(10px, 0px);
-    margin: 0;
-    transition: all 0.2s;
-    background-color:transparent;
-  }
-}
-
-.button-green {
-  background-color: $primary-color;
-  color: $white;
-  padding: 20px 40px 20px 20px;
-  font-size: 1.2em;
-  font-weight: 300;
-  margin-top: 1em;
-  display: inline-flex;
-  transition: all 0.45s;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $white;
-    color:$primary-color;
-
-    &:after {
-      transform: translate(15px, 0px);
-    }
-  }
-
-  &:after {
-    content: '\25BA';
-    display: block;
-    width: 10px;
-    height: 10px;
-    transform: translate(10px,0px);
     margin: 0;
     transition: all 0.2s;
     background-color:transparent;
