@@ -15,18 +15,24 @@
 			<footer class="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
 				<div id="footer-form" class="footer-form">
-			  <div class="row expanded">
+				<div class="header">
+					<div class="divider">
+						contact us
+					</div>
+					Complete this simple form or call 866.787.6699
+				</div>
+				<div class="photo-overlay">
+				</div>
+				<div class="row expanded">
 					<?php dynamic_sidebar( 'form-footer-widgets' ); ?>
 				</div>
 			</div>
-				<div class="footer-upper hide-for-small-only">
-					 <div class="row-16">
+			<div class="footer-blue">
+				<div class="row upper-footer">
 					<?php dynamic_sidebar( 'upper-footer-widgets' ); ?>
-					</div>
-			</div>
-			<div class="footer-lower">
-				 <div class="row">
-				<?php dynamic_sidebar( 'lower-footer-widgets' ); ?>
+			  </div>
+				 <div class="row lower-footer">
+					 <?php dynamic_sidebar( 'lower-footer-widgets' ); ?>
 				</div>
 			</div>
 				<?php do_action( 'foundationpress_after_footer' ); ?>

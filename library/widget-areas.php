@@ -29,16 +29,6 @@ function foundationpress_sidebar_widgets() {
 	));
 
 	register_sidebar(array(
-		'id' => 'upper-footer-widgets',
-		'name' => __( 'Upper Footer widgets', 'foundationpress' ),
-		'description' => __( 'Drag sponser images to this footer container', 'foundationpress' ),
-		'before_widget' => '<article id="%1$s" class=" widget %2$s">',
-		'after_widget' => '</article>',
-		'before_title' => '<h6>',
-		'after_title' => '</h6>',
-	));
-
-	register_sidebar(array(
 		'id' => 'blog-right-widgets',
 		'name' => __( 'Blog Right widgets', 'foundationpress' ),
 		'description' => __( 'Drag Categories and Search to this footer container', 'foundationpress' ),
@@ -48,16 +38,26 @@ function foundationpress_sidebar_widgets() {
 		'after_title' => '</h6>',
 	));
 
+	register_sidebar(array(
+		'id' => 'upper-footer-widgets',
+		'name' => __( 'Upper Footer widgets', 'foundationpress' ),
+		'description' => __( 'Drag info and image to this footer container', 'foundationpress' ),
+		'before_widget' => '<article id="%1$s" class="large-12 columns widget %2$s">',
+		'after_widget' => '</article>',
+		'before_title' => '<h6>',
+		'after_title' => '</h6>',
+	));
 
 	register_sidebar(array(
 		'id' => 'lower-footer-widgets',
 		'name' => __( 'Lower Footer widgets', 'foundationpress' ),
 		'description' => __( 'Drag info and image to this footer container', 'foundationpress' ),
-		'before_widget' => '<article id="%1$s" class="large-3 columns widget %2$s">',
+		'before_widget' => '<article id="%1$s" class="large-4 small-12 columns widget %2$s">',
 		'after_widget' => '</article>',
 		'before_title' => '<h6>',
 		'after_title' => '</h6>',
 	));
+
 	register_sidebar(array(
 		'id' => 'form-footer-widgets',
 		'name' => __( 'Form Footer widgets', 'foundationpress' ),

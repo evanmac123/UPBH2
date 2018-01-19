@@ -75,11 +75,17 @@ $global-radius: 0;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
+$secondary-font-family: 'EB Garamond', sans-serif;
 
 $light-green: #CEE5B7;
 $dark-green: #81C566;
+$light-blue: #6486AB;
 $dark-blue: #00467F;
 
+//transparent+overlays
+$white-transparent: #fefefebf;
+
+//dropshadows
 $dropshadow: 3px 7px 5px -3px rgba(0,0,0,0.44);
 
 @include add-foundation-colors;
