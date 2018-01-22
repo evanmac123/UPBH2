@@ -16,18 +16,41 @@ get_header(); ?>
             </div>
 		</section>
 
+		<section class="home__about">
+			<div class="dark divider row">
+				about
+			</div>
+			<div class="row">
+				<div class="column large-4">
+				<div class="home__about-image" style="background-image:url('<?php the_field("about-img"); ?>');">
+				</div>
+				</div>
+			<div class="column large-8">
+				<h1 class="home__about-headline">
+					<?php the_field("about-headline"); ?>
+				</h1>
+				<div class="home__about-paragraph">
+					<?php the_field("about-paragraph"); ?>
+				</div>
+				<a href="<?php the_field("about-link"); ?>" class="home__about-cta">
+					<button> <?php the_field("about-button-text"); ?></button>
+				</a>
+			</div>
+			</div>
+		</section>
+
 		<section class="home__program">
-			<div class="dark divider">
+			<div class="dark divider row">
 				programs
 			</div>
 			<div class="row ">
-				<h1><?php the_field("program-headline"); ?></h1>
+				<h2 class="large-centered columns large-8"><?php the_field("program-headline"); ?></h2>
 			</div>
 			<div class="row ">
-				<p><?php the_field("program-paragraph"); ?></p>
+				<p class="large-centered columns large-8"><?php the_field("program-paragraph"); ?></p>
 			</div>
-			<div class="row expanded large-collapsed">
-				<div class="home__program-left large-6 column" style="background-image:url('<?php  the_field("program-left-background");?>')">
+			<div class="row expanded large-collapsed home__program-link-split">
+				<div class="home__program-block large-6 column" style="background-image:url('<?php  the_field("program-left-background");?>')">
 					<img class="home__program-icon" src="<?php  the_field("program-left-icon");?>">
 					<div class=home__program-title>
 						<?php  the_field("program-left-title");?>
@@ -37,10 +60,10 @@ get_header(); ?>
 							learn more
 						</a>
 					</div>
-				</div>'<div class="row expanded large-collapsed">
-					<div class="home__program-right large-6 column" style="background-image:url('<?php  the_field("program-right-background");?>')">
+				</div>
+					<div class="home__program-block large-6 column" style="background-image:url('<?php  the_field("program-right-background");?>')">
 						<img class="home__program-icon" src="<?php  the_field("program-right-icon");?>">
-						<div class=home__program-title>
+						<div class="home__program-title">
 							<?php  the_field("program-right-title");?>
 						</div>
 						<div class="home__program-link">
@@ -48,8 +71,7 @@ get_header(); ?>
 								learn more
 							</a>
 						</div>
-					</div>'
-
+					</div>
 			</div>
 		</section>
 
