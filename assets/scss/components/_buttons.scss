@@ -1,8 +1,11 @@
 button {
   color: $white;
   background-color: $primary-color;
-  padding: 10px 50px;
+  padding: 14px 60px;
   transition: all .4s;
+  cursor:pointer;
+  font-weight: 700;
+  font-size: .8em;
   &:hover {
     color: $secondary-color;
     transition: all .4s;

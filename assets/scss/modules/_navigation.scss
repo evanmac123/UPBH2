@@ -41,6 +41,9 @@
   width: 100%;
   background-color: $secondary-color;
   z-index: 10;
+  position: fixed;
+  top:0;
+  left:0;
   //height: $header-top-length;
   @include breakpoint(xlarge down) {
     height: auto;
@@ -112,6 +115,7 @@ ul {
   width: 100%;
   position: fixed;
   left: 0;
+  z-index: 100;
 
   .top-bar {
     float: left;
@@ -383,6 +387,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  right: 0;
+  top:0;
+  left:0;
 
   &__left {
     float: left;

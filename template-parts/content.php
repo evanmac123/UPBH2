@@ -30,7 +30,7 @@
 				<div class="entry-content">
 					<?php  the_excerpt(); ?>
 				</div>
-			
+
 			</div>
 </div>
 </div>

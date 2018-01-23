@@ -65,7 +65,7 @@
 						</div>
 						<div class="mobile-bar__right">
 							<img  class="call"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/call.png">
-							<button class="menu-icon" type="button"></button>
+							<div class="menu-icon"></div>
 						</div>
 					</div>
 					<nav class="site-navigation top-bar" role="navigation">
