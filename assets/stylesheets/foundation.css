@@ -7233,7 +7233,7 @@ a.thumbnail {
 
 .site-header {
   width: 100%;
-  background-color: #877B77;
+  background-color: rgba(135, 123, 119, 0.5);
   z-index: 10;
   position: fixed;
   top: 0;
@@ -7241,8 +7241,7 @@ a.thumbnail {
   @media screen and (max-width: 89.9375em) {
     .site-header {
       height: auto;
-      border-bottom: #e4e4e4;
-      padding: 10px; } }
+      border-bottom: #e4e4e4; } }
 
 .call-bar-right {
   float: right;
@@ -7433,7 +7432,8 @@ ul {
         width: 100%;
         display: inherit; }
         .site-navigation .program-bar-r .top-level a:hover {
-          color: #fefefe; }
+          color: #fefefe;
+          opacity: .5; }
       .site-navigation .program-bar-r .top-level .sub-menu-0 {
         top: 136px;
         display: none;
@@ -7564,7 +7564,7 @@ ul {
   font-weight: bold; }
 
 .mobile-bar {
-  background-color: #877B77;
+  background-color: rgba(135, 123, 119, 0.5);
   padding: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7578,7 +7578,8 @@ ul {
   position: fixed;
   right: 0;
   top: 0;
-  left: 0; }
+  left: 0;
+  padding: 10px; }
   .mobile-bar__left {
     float: left; }
   .mobile-bar__right {
@@ -7675,9 +7676,10 @@ ul {
   body {
     position: relative; } }
 
-@media screen and (max-width: 63.9375em) {
-  .container {
-    margin-top: 46px; } }
+.off-canvas-wrapper {
+  position: absolute;
+  overflow: hidden;
+  top: 0; }
 
 .entry-content a[href^="tel:"] {
   color: #6A6A6A;
@@ -7822,7 +7824,7 @@ ul {
 @media screen and (max-width: 63.9375em) {
   .off-canvas-content {
     width: 100%;
-    float: left; } }
+    float: none; } }
 
 @media print, screen and (min-width: 64em) {
   .off-canvas-content {
@@ -8023,6 +8025,11 @@ button {
   cursor: pointer;
   font-weight: 700;
   font-size: .8em; }
+  @media screen and (max-width: 63.9375em) {
+    button {
+      width: 100%;
+      padding: 20px 0;
+      font-size: 1.2em; } }
   button:hover {
     color: #877B77;
     -webkit-transition: all .4s;
@@ -8278,18 +8285,33 @@ li:before {
           background-size: cover;
   background-repeat: no-repeat;
   padding-top: 30px; }
+  .home section:first-child {
+    padding: 0; }
 
-.home__slider .ms-slide-bgcont::after {
-  background-color: rgba(100, 134, 171, 0.7);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  content: ' ';
+@media screen and (max-width: 89.9375em) {
+  .home h1,
+  .home h2 {
+    text-align: center; } }
+
+.home__slider .ms-slide-bgcont {
+  z-index: -1;
+  position: relative;
+  width: 100%;
+  height: 180px;
   display: block;
-  -webkit-transition: 0.4s all;
-  transition: 0.4s all; }
+  -webkit-background-size: cover;
+          background-size: cover; }
+  .home__slider .ms-slide-bgcont:before {
+    background-color: rgba(100, 134, 171, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    content: ' ';
+    display: block;
+    -webkit-transition: 0.4s all;
+    transition: 0.4s all; }
 
 .home__slider .home-slider-heading {
   font-family: "Lato", Helvetica, Arial, sans-serif;
@@ -8297,27 +8319,24 @@ li:before {
   text-align: left;
   line-height: 1.15; }
 
-.home__slider .home__slider-description {
-  font-size: 16px; }
-
 .home__slider .home-slider-heading-mobile {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  color: #F9AB80;
+  font-size: 33px;
+  color: #6486AB;
   text-align: left;
-  line-height: 1.25;
-  margin-top: 15px; }
+  line-height: 1.5;
+  margin-top: 20px;
+  font-weight: 700;
+  text-transform: uppercase; }
 
 .home__slider .home__slider-description-mobile {
-  font-size: 16px; }
+  line-height: 1.5;
+  color: #877B77;
+  margin: 0; }
 
 .home__slider button {
   margin-top: 30px;
   width: 100%; }
-
-@media screen and (max-width: 39.9375em) {
-  .home__slider .home__split-column {
-    padding: 35px; } }
 
 .home section:first-child {
   padding-top: 0; }
@@ -8331,7 +8350,9 @@ li:before {
   -webkit-background-size: cover;
           background-size: cover;
   height: 250px;
-  width: 250px; }
+  width: 250px;
+  text-align: center;
+  margin: 0 auto; }
 
 .home__about-headline {
   text-align: center; }
@@ -8437,9 +8458,15 @@ li:before {
     background-color: #6486AB;
     padding: 40px 0;
     margin-top: 50px; }
+    @media screen and (max-width: 63.9375em) {
+      .home__insurance .provider-gallery {
+        text-align: center; } }
     .home__insurance .provider-gallery img {
-      opacity: .7;
+      opacity: 0.7;
       padding: 15px; }
+      @media screen and (max-width: 63.9375em) {
+        .home__insurance .provider-gallery img {
+          padding: 30px; } }
 
 .home__leadership {
   background-image: url("../images/home-bio-back.png");
@@ -8454,13 +8481,13 @@ li:before {
 
 .home__blog .news .card {
   background-color: #F6F2EF;
-  -webkit-transition: .4s all;
-  transition: .4s all;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
   border: 0; }
   .home__blog .news .card:hover .read-more {
     color: #F9AB80;
-    -webkit-transition: .4s all;
-    transition: .4s all; }
+    -webkit-transition: 0.4s all;
+    transition: 0.4s all; }
   .home__blog .news .card .post-image {
     height: 191px;
     width: 100%;
@@ -8472,17 +8499,18 @@ li:before {
     padding: 5px 20px;
     color: #fefefe; }
   .home__blog .news .card .content {
-    padding: 0 20px 20px 20px; }
+    padding: 0 20px 20px; }
     .home__blog .news .card .content .description {
-      font-size: .8em; }
+      font-size: 0.8em; }
     .home__blog .news .card .content .read-more {
       font-weight: 700; }
 
 .home__blog .university-park {
   text-align: center; }
-  .home__blog .university-park .description, .home__blog .university-park .date {
+  .home__blog .university-park .date,
+  .home__blog .university-park .description {
     text-align: left;
-    font-size: .8em; }
+    font-size: 0.8em; }
   .home__blog .university-park .description {
     height: 121px;
     overflow: hidden; }
@@ -8493,12 +8521,12 @@ li:before {
   .home__blog .university-park button {
     margin: 30px 0; }
 
-h1 {
+h1, h3 {
   font-family: "EB Garamond", sans-serif;
   color: #6486AB;
   margin: 20px 0; }
 
-h3, h5, h6 {
+h5, h6 {
   color: #737373;
   font-family: "Lato", Helvetica, Arial, sans-serif; }
 

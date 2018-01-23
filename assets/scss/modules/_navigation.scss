@@ -39,7 +39,7 @@
 
 .site-header {
   width: 100%;
-  background-color: $secondary-color;
+  background-color: $brown-transparent;
   z-index: 10;
   position: fixed;
   top:0;
@@ -48,7 +48,6 @@
   @include breakpoint(xlarge down) {
     height: auto;
     border-bottom: $white-gray;
-    padding: 10px;
   }
 }
 
@@ -251,6 +250,7 @@ ul {
 
         &:hover {
           color: $white;
+          opacity: .5;
         }
       }
 
@@ -382,7 +382,7 @@ ul {
 // Mobile menu
 
 .mobile-bar {
-  background-color: $secondary-color;
+  background-color: $brown-transparent;
   padding: 3px;
   display: flex;
   align-items: center;
@@ -391,6 +391,7 @@ ul {
   right: 0;
   top:0;
   left:0;
+  padding: 10px;
 
   &__left {
     float: left;

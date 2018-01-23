@@ -6,6 +6,11 @@ button {
   cursor:pointer;
   font-weight: 700;
   font-size: .8em;
+  @include breakpoint(medium down) {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 1.2em;
+  }
   &:hover {
     color: $secondary-color;
     transition: all .4s;

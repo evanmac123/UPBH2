@@ -9,9 +9,10 @@ get_header(); ?>
 				<?php the_field("main-slider"); ?>
 			</div>
         <div class="home__slider show-for-small-only row">
-            <img class="ms-slide-bgcont" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-back.png" />
+            <div class="ms-slide-bgcont" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-back.png');">
+						</div>
             <h2 class="home-slider-heading-mobile columns small-12">New Perspectives</h2>
-            <div class="home__slider-description-mobile columns small-12" style="text-align: left;">Moving beyond the barriers in Treatment Preparation and Coordination Planning to create better outcomes for our patients.</div>
+            <h3 class="home__slider-description-mobile columns small-12" style="text-align: left;">Moving beyond the barriers in Treatment Preparation and Coordination Planning to create better outcomes for our patients.</h3>
           	<a class="columns small-12" href="/university-park/"><button>Getting Started</button></a>
         </div>
 		</section>
@@ -41,7 +42,9 @@ get_header(); ?>
 
 		<section class="home__program">
 			<div class="dark divider row">
+				<div class="small-12">
 				programs
+				</div>
 			</div>
 			<div class="row ">
 				<h2 class="large-centered columns large-8"><?php the_field("program-headline"); ?></h2>
@@ -61,18 +64,18 @@ get_header(); ?>
 					</div>
 				</div>
 				</a>
-					<a href="<?php  the_field("program-right-link");?>">
-					<div class="home__program-block large-6 column" style="background-image:url('<?php  the_field("program-right-background");?>')">
-						<img class="home__program-icon" src="<?php the_field("program-right-icon");?>">
-						<div class="home__program-title">
-							<?php  the_field("program-right-title");?>
-						</div>
-						<div class="home__program-link">
-
-								learn more
-						</div>
+				<a href="<?php  the_field("program-right-link");?>">
+				<div class="home__program-block large-6 column" style="background-image:url('<?php  the_field("program-right-background");?>')">
+					<img class="home__program-icon" src="<?php the_field("program-right-icon");?>">
+					<div class="home__program-title">
+						<?php  the_field("program-right-title");?>
 					</div>
-					</a>
+					<div class="home__program-link">
+
+							learn more
+					</div>
+				</div>
+				</a>
 			</div>
 		</section>
 
@@ -111,7 +114,6 @@ get_header(); ?>
 		</section>
 
 		<section class="home__insurance">
-			<div class="row">
 			<div class="column large-8 small-centered">
 				<div class="dark divider row">
 					programs
@@ -132,7 +134,6 @@ get_header(); ?>
 					</a>
 				</div>
 			</div>
-		</div>
 
 				<div class="row expanded provider-gallery">
 					<div class="row">
@@ -140,7 +141,7 @@ get_header(); ?>
 						$images = get_field('provider-gallery');
 						if( $images ): ?>
 						<?php foreach( $images as $image ): ?>
-						<div class="column small-2">
+						<div class="column small-12 medium-2">
 							<span class="helper"></span>
 							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 						</div>
@@ -214,9 +215,10 @@ get_header(); ?>
 								);
 								$posts_array_news = get_posts( $args ); ?>
 							<?php foreach ( $posts_array_news as $post ) : setup_postdata( $post ); ?>
-								<h4>
-									<?php the_title(); ?>
-								</h4>
+								<div class="columns large-12">
+									<h4>
+										<?php the_title(); ?>
+									</h4>
 									<div class="date">
 										<?php
 										echo get_the_date();
@@ -230,11 +232,12 @@ get_header(); ?>
 											learn more
 										</button>
 									</a>
+								</div>
 						 	<?php endforeach;
 						 		wp_reset_postdata(); ?>
 						</div>
 				 		<div class="recognized-by row">
-						 <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/recognized.png">
+						 <img class="columns large-12" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/recognized.png">
 						</div>
 					</div>
 				</div>
