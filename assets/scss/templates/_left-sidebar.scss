@@ -11,98 +11,83 @@ li {
   }
 }
 
-#side-menu {
-  @include breakpoint(small) {
-    display:none;
-  }
+.sidebar {
+  margin-top:0;
   @include breakpoint(medium) {
     display:block;
   }
+  @include breakpoint(medium down) {
+    display:none;
+  }
+
   .menu-item {
     @include menu-item;
+    display: none;
   }
+
+  .current-menu-ancestor{
+    display: block;
+    padding: 0;
+    text-transform: uppercase;
+    a{ //top level
+      display:none;
+    }
+    ul{
+      display:block
+    }
+    li { //secondary
+      display: block;
+      a{
+        display: inline-block;
+        color: $secondary-color;
+        font-size: inherit;
+        padding: .5em 0 0 0;
+        border-bottom: 0 solid $secondary-color;
+        transition: .4s all;
+        &:hover {
+          opacity: .7;
+          transition: .4s all;
+        }
+      }
+      &:first-child a{
+        padding: 0;
+      }
+      li a{ //third level
+        padding: .2em;
+        display: block;
+        border-bottom: 0 solid $secondary-color;
+      }
+    }
+  }
+
+  .current-menu-item{
+    font-weight: 700;
+    a {
+      display:inline-block;
+      @include primary-diamond;
+      &:after {
+        margin-top: 7px;
+      }
+    }
+    ul a:after{
+      display:none;
+    }
+  }
+
+  .menu > li:first-child > a {
+    color:blue;
+  }
+
 
   .menu-item-has-children {
     border-bottom: 0;
 
-    ul {
+    ul ul{
       margin-left: 25px;
     }
   }
 
   ul {
     margin-left: 0;
-  }
-
-  .current-menu-item {
-    a {
-      color: $primary-color;
-    }
-
-    .active a {
-      color: $primary-color;
-    }
-
-    li a {
-      color: $light-gray;
-    }
-  }
-}
-
-#bottom-menu {
-  @include breakpoint(small) {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  li,
-  ul {
-    margin: 0;
-  }
-
-  ul {
-    @include breakpoint(medium) {
-       @include grid-layout(4, '.menu-item', 20px);
-    }
-  }
-
-  li {
-    position: relative;
-  }
-
-  .menu-item a {
-    border: 1px $primary-color solid;
-    padding: 10px;
-    font-size: 1.2em;
-    color: $primary-color;
-    font-weight: 300;
-    width: 100%;
-    height: 100px;
-    margin-top: 1em;
-    display: block;
-    cursor: pointer;
-    transition: all 0.2s;
-
-    &:hover {
-      background-color: $primary-color;
-      color: $white;
-
-      &:after {
-        transform: translate(15px, 2px);
-      }
-    }
-
-    &:after {
-      content: '\232A';
-      display: block;
-      width: 10px;
-      height: 10px;
-      transform: translate(10px, 2px);
-      margin: 0;
-      transition: all 0.2s;
-      position: absolute;
-      right: 50px;
-      bottom: 40px;
-    }
   }
 }

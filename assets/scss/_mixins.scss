@@ -13,6 +13,19 @@
   object-position: center;
 }
 
+@mixin overlay {
+  &:after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    content: ' ';
+    display: block;
+    transition: 0.4s all;
+  }
+}
+
 @mixin underline{
   &:after {
     content: '';
@@ -30,11 +43,27 @@
 @mixin menu-item{
   font-size: 0.9em;
   font-weight: 400;
-  border-bottom: 1px $white solid;
   line-height: 1.2em;
   padding-top: .5em;
   padding-bottom: .5em;
+  color: $secondary-color;
 }
+
+@mixin primary-diamond {
+  &::after {
+    content: "";
+    background-image: url("../images/nav-underline.png");
+    height: 10px;
+    width: 100%;
+    display: block;
+    margin-top: 24px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display:inline-block;
+  }
+}
+
 @mixin down-arrow{
   &:after {
     content: "";

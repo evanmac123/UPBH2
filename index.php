@@ -15,35 +15,56 @@
 
 get_header(); ?>
 
+<div class="featured-hero" style="background-image:url('<?php the_field("blog-header-image", "option"); ?>');">
+</div>
 <div class="main-wrap" role="main">
 	<article class="main-content">
-	<?php if ( have_posts() ) : ?>
+		<div class="news">
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-		<?php endwhile; ?>
+				<?php //Run Loop on Posts Tagged News
+				$args = array(
+				'post_type'      => 'post',
+				'orderby'        => 'date',
+				'order'          => 'ASC',
+				);
+				$posts_array = get_posts( $args ); ?>
+				<?php foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
+				<div class="columns large-4">
+					<a href="<?php the_permalink(); ?>">
+					<div class="card">
+						<?php //grabbing all content
+						$image = get_the_post_thumbnail_url();
+						?>
+						<?php if( !empty($image) ): ?>
+						<div class="post-image" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>')" >
+						</div>
 
-		<?php else : ?>
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+						<?php else: ?>
 
-		<?php endif; // End have_posts() check. ?>
+						<div class="post-image" style="background-image:url('<?php the_field("blog-fallback-image", "option"); ?>');">
+						</div>
 
-		<?php /* Display navigation to next/previous pages when applicable */ ?>
-		<?php
-		if ( function_exists( 'foundationpress_pagination' ) ) :
-			foundationpress_pagination();
-		elseif ( is_paged() ) :
-		?>
-			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-			</nav>
-		<?php endif; ?>
+						<?php endif; ?>
+						<div class="author-bar">
+							<?php
+								the_date();
+								echo " by ";
+								the_author();
+							?>
+						</div>
+						<div class="content">
+							<h4 class="title"><?php  the_title();?></h4>
+							<div class="description"><?php  the_excerpt(); ?></div>
+						</div>
+					</div>
+				</a>
+				</div>
+			<?php endforeach;
+			wp_reset_postdata(); ?>
 
+		</div>
 	</article>
 	<?php get_sidebar(); ?>
-
 </div>
 
 <?php get_footer();

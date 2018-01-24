@@ -42,14 +42,12 @@ get_header(); ?>
 
 		<section class="home__program">
 			<div class="dark divider row">
-				<div class="small-12">
 				programs
-				</div>
 			</div>
-			<div class="row ">
+			<div class="row">
 				<h2 class="large-centered columns large-8"><?php the_field("program-headline"); ?></h2>
 			</div>
-			<div class="row ">
+			<div class="row">
 				<p class="large-centered columns large-8"><?php the_field("program-paragraph"); ?></p>
 			</div>
 			<div class="row expanded large-collapsed home__program-link-split">
@@ -116,7 +114,7 @@ get_header(); ?>
 		<section class="home__insurance">
 			<div class="column large-8 small-centered">
 				<div class="dark divider row">
-					programs
+					insurance
 				</div>
 				<div class="row">
 					<h2 class="home__insurance-title"> <?php the_field("insurance-title"); ?> </h2>
@@ -163,7 +161,8 @@ get_header(); ?>
 
 		<section class="home__blog">
 			<div class="row">
-				<div class="news large-4 column ">
+				<div class="news large-4 column">
+				<a href="<?php the_permalink();?>">
 					<?php //Run Loop on Posts Tagged News
 					$args = array(
 					'post_type'      => 'post',
@@ -197,6 +196,7 @@ get_header(); ?>
 				<?php endforeach;
 		 		wp_reset_postdata(); ?>
 			</div>
+			</a>
 
 			<div class="large-8 column university-park">
 				<div class="row">

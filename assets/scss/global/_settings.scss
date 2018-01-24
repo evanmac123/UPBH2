@@ -85,7 +85,8 @@ $light-brown: #F6F2EF;
 
 //transparent+overlays
 $white-transparent: #fefefebf;
-$brown-transparent: rgba(135,123,119,0.50);
+$brown-transparent: rgba(135,123,119,0.80);
+$light-brown-transparent: rgba(135,123,119,0.50);
 $green-transparent: rgba(202,216,182,0.85);
 $blue-transparent: rgba(100,134,171,0.70);
 
@@ -634,7 +635,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $secondary-color;
+$topbar-background: transparent;
 $topbar-submenu-background: $white;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;

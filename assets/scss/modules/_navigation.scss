@@ -1,16 +1,18 @@
 // Navigation breakpoints
 
-.mobile-menu,
+.call-bar,
+.mobile-bar,
 .site-mobile-title,
 .title-bar-left,
 .title-bar-right {
-  @include hide-for(xlarge);
+  @include hide-for(large);
 }
 
+,
 .desktop-menu,
 .site-navigation,
 .top-bar-left {
-  @include show-for(xlarge);
+  @include show-for(large);
 }
 // Site title
 
@@ -42,8 +44,8 @@
   background-color: $brown-transparent;
   z-index: 10;
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   //height: $header-top-length;
   @include breakpoint(xlarge down) {
     height: auto;
@@ -85,9 +87,7 @@ li,
 ul {
   cursor: pointer;
 }
-
 // Anchor fix for sticky top menu hiding content
-
 #acd,
 #adm,
 #adv,
@@ -110,7 +110,7 @@ ul {
   color: $white;
   z-index: 1;
   top: 0;
-  background-color: $secondary-color;
+  background-color: $brown-transparent;
   width: 100%;
   position: fixed;
   left: 0;
@@ -189,10 +189,15 @@ ul {
   }
 
   .program-bar-r {
-    float: right;
     text-align: right;
-    margin: 1em 0;
+    margin-top: 12px;
     background-color: transparent;
+    float: right;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 70px;
+
 
     li.top-level:nth-child(2) {
       border-right: 0;
@@ -201,43 +206,29 @@ ul {
     .top-level {
       font-size: 0.8em;
       font-weight: 400;
-      width: 130px;
-      float: right;
+      float: left;
       height: 30px;
       line-height: 15px;
       text-align: center;
-      padding: 10px 0;
-      border-right: 1px solid $secondary-color;
+      width: 120px;
       position: relative;
       text-transform: uppercase;
 
       &.opened {
-          font-weight: 700;
+        font-weight: 700;
+        @include primary-diamond;
+
         &::after {
           content: "";
-          background-image: url("../images/nav-underline.png");
           height: 10px;
           width: 100%;
           display: block;
-          margin-top: 24px;
-          position: absolute;
-          background-repeat: no-repeat;
-          background-size: contain;
-        }
-
-        &::before {
-          content: "";
-          height: 10px;
-          width: 100%;
-          display: block;
-          margin-top: 24px;
-          margin-left: 50px;
+          margin-top: 32px;
           position: absolute;
           background-repeat: no-repeat;
           background-size: contain;
         }
       }
-
 
       a {
         color: $white;
@@ -250,12 +241,12 @@ ul {
 
         &:hover {
           color: $white;
-          opacity: .5;
+          opacity: 0.5;
         }
       }
 
       .sub-menu-0 {
-        top: 136px;
+        top: 126px;
         display: none;
         right: auto;
         left: 15%;
@@ -334,15 +325,21 @@ ul {
           top: 45px;
 
           .sub-menu-items {
-            display: block;
+            display: none;
             position: absolute;
-            left: 250px;
-            width: 300px;
+            left: 110px;
+            top: -45px;
+            right: 0;
+            bottom: 0;
+            width: 500px;
+            height: 365px;
             -webkit-transition: all 0.45s;
             transition: all 0.45s;
             opacity: 0;
+            padding: 40px 130px;
             font-size: 1em;
             font-weight: 400;
+
           }
 
           li {
@@ -366,8 +363,9 @@ ul {
           }
         }
 
-        .menu-item-has-children:hover {
-          .sub-menu-items {
+        .menu-item-has-children:hover{
+          .sub-menu-items:hover, .sub-menu-items {
+            display:block;
             opacity: 1;
           }
         }
@@ -389,8 +387,8 @@ ul {
   justify-content: space-between;
   position: fixed;
   right: 0;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   padding: 10px;
 
   &__left {
@@ -407,11 +405,11 @@ ul {
 
   .menu-icon {
     width: 40px;
-    &:after{
+
+    &:after {
       box-shadow: 0 10px 0 #fefefe, 0 20px 0 #fefefe;
       height: 3px;
       margin-top: -4px;
-
     }
   }
 
@@ -430,22 +428,22 @@ ul {
   margin-top: 10px;
   background-color: $white;
   font-size: 1em;
-  .menu.nested{
+
+  .menu.nested {
     background-color: $light-green;
-    font-size: .9em;
+    font-size: 0.9em;
     margin-left: 0;
     padding-left: 1em;
   }
+
   .menu .active > a {
     color: $secondary-color;
   }
 }
 
-
 .mobile-menu,
 .mobile-off-canvas-menu {
   float: right;
-
   // current page
   .current_page_item > a {
     font-weight: bold;

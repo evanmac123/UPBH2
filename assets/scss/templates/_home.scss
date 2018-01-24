@@ -5,9 +5,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 30px;
-    &:first-child{
-      padding:0;
-    }
   }
   @include breakpoint(xlarge down) {
     h1,
@@ -24,17 +21,13 @@
       height: 180px;
       display: block;
       background-size: cover;
+      @include overlay;
+      &:after {
+        background-color: $brown-transparent;
+      }
 
-      &:before {
+      &:after {
         background-color: $blue-transparent;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        content: ' ';
-        display: block;
-        transition: 0.4s all;
       }
     }
 
@@ -109,31 +102,20 @@
       height: 500px;
       background-size: cover;
       position: relative;
-      z-index: 1;
       color: white;
-
-      &:after {
-        background-color: $brown-transparent;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        content: ' ';
-        display: block;
-        z-index: -1;
-        transition: 0.4s all;
-      }
-
+      z-index: 1;
       &:hover {
         color: $dark-blue;
         transition: 0.4s all;
 
-        a {}
-
         &:after {
           background-color: $green-transparent;
         }
+      }
+      @include overlay;
+      &:after {
+        background-color: $brown-transparent;
+        z-index: -1;
       }
     }
 
@@ -261,47 +243,7 @@
   }
 
   &__blog {
-    .news {
-      .card {
-        background-color: $light-brown;
-        transition: 0.4s all;
-        border: 0;
-
-        &:hover {
-          .read-more {
-            color: $primary-color;
-            transition: 0.4s all;
-          }
-        }
-
-        .post-image {
-          height: 191px;
-          width: 100%;
-          display: block;
-          background-size: cover;
-        }
-
-        .author-bar {
-          background-color: $dark-blue;
-          padding: 5px 20px;
-          color: $white;
-        }
-
-        .content {
-          padding: 0 20px 20px;
-
-          .title {}
-
-          .description {
-            font-size: 0.8em;
-          }
-
-          .read-more {
-            font-weight: 700;
-          }
-        }
-      }
-    }
+    //news is in content
 
     .university-park {
       text-align: center;
