@@ -6,7 +6,6 @@
 }
 
 .entry-content {
-
   a[href^="tel:"] {
     color: $dark-gray;
     text-decoration: none;
@@ -36,6 +35,9 @@
 
 .main-content {
   // default 2 column
+  article.page{
+    float: left;
+  }
 
   // 1 column
   .full-width.main-wrap & {

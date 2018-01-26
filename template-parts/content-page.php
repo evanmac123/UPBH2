@@ -1,4 +1,4 @@
-row<?php
+<?php
 /**
  * The default template for displaying page content
  *
@@ -72,22 +72,6 @@ row<?php
 	</section>
 		<?php endif;?>
 	<?php endwhile;?>
-	<section class="grid-container ">
-		<div class="gallery-title">
-			<?php the_field("gallery-title")?>
-		</div>
-		<div class="gallery row">
-				<?php
-					$images = get_field('image-pack');
-					if( $images ):
-				 foreach( $images as $image ): ?>
-			<div class="large-2 small-6 medium-4 columns gallery-image">
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-			</div>
-				<?php endforeach; ?>
-						<?php endif; ?>
-		</div>
-	</section>
 		</div>
 
 

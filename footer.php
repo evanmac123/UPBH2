@@ -23,9 +23,7 @@
 				</div>
 				<div class="photo-overlay">
 				</div>
-				<div class="row expanded">
 					<?php dynamic_sidebar( 'form-footer-widgets' ); ?>
-				</div>
 			</div>
 			<div class="footer-blue">
 				<div class="row upper-footer">

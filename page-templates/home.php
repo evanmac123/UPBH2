@@ -164,7 +164,6 @@ get_header(); ?>
 		<section class="home__blog">
 			<div class="row">
 				<div class="news large-4 column">
-				<a href="<?php the_permalink();?>">
 					<?php //Run Loop on Posts Tagged News
 					$args = array(
 					'post_type'      => 'post',
@@ -175,12 +174,15 @@ get_header(); ?>
 					);
 					$posts_array = get_posts( $args ); ?>
 					<?php foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
+					<a href="the_permalink();">
 						<div class="card">
 							<?php //grabbing all content
 							$image = get_the_post_thumbnail_url();
 							?>
 							<?php if( !empty($image) ): ?>
 							<div class="post-image" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>')" />
+							<?php else: ?>
+								<div class="post-image" style="background-image:url('<?php the_field("blog-fallback-image", "option"); ?>');">
 							<?php endif; ?>
 							</div>
 							<div class="author-bar">
@@ -195,10 +197,10 @@ get_header(); ?>
 								<div class="description"><?php  the_excerpt(); ?></div>
 							</div>
 						</div>
+						</a>
 				<?php endforeach;
 		 		wp_reset_postdata(); ?>
 			</div>
-			</a>
 
 			<div class="large-8 column university-park">
 				<div class="row">
