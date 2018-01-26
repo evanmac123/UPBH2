@@ -61,15 +61,18 @@
     }
   }
 
-  section:first-child {
-    padding-top: 0;
-  }
-
   .main-wrap {
     padding: 0;
   }
 
+
+  .waves-background{
+      background-image:url("../images/waves.png");
+      background-size: contain;
+  }
+
   &__about {
+    padding: 30px;
     &-image {
       border-radius: 50%;
       display: block;
@@ -77,15 +80,16 @@
       height: 250px;
       width: 250px;
       text-align: center;
-      margin: 0 auto;
+      margin: 100px auto 0 auto;
     }
 
     &-headline {
       text-align: center;
     }
 
-    &-paragraph {}
-
+    &-button {
+      text-align:center;
+    }
     button {
       margin-top: 30px;
     }
@@ -93,7 +97,7 @@
 
   &__program {
     &-link-split {
-      margin-top: 30px;
+      margin-top: 60px;
       color: $white;
       text-align: center;
     }
@@ -200,6 +204,7 @@
 
     &-description {
       text-align: left;
+      margin: 17px 0;
     }
 
     button {
@@ -218,7 +223,7 @@
         opacity: 0.7;
         padding: 15px;
         @include breakpoint(medium down) {
-          padding: 30px;
+          padding: 20px 30px;
         }
       }
     }

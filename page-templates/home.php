@@ -16,27 +16,29 @@ get_header(); ?>
           	<a class="columns small-12" href="/university-park/"><button>Getting Started</button></a>
         </div>
 		</section>
-
+ 		<div class="waves-background">
 		<section class="home__about">
-			<div class="dark divider row">
-				about
-			</div>
 			<div class="row">
 				<div class="column large-4">
 					<div class="home__about-image" style="background-image:url('<?php the_field("about-img"); ?>');">
 					</div>
 				</div>
-			<div class="column large-8">
-				<h1 class="home__about-headline">
-					<?php the_field("about-headline"); ?>
-				</h1>
-				<div class="home__about-paragraph">
-					<?php the_field("about-paragraph"); ?>
+				<div class="column large-8">
+					<div class="dark divider row">
+						about
+					</div>
+					<h1 class="home__about-headline row">
+						<?php the_field("about-headline"); ?>
+					</h1>
+					<div class="home__about-paragraph row">
+						<?php the_field("about-paragraph"); ?>
+					</div>
+					<div class="row home__about-button">
+					<a href="<?php the_field("about-link"); ?>" class="home__about-cta large-12 large-centered">
+						<button> <?php the_field("about-button-text"); ?></button>
+					</a>
+					</div>
 				</div>
-				<a href="<?php the_field("about-link"); ?>" class="home__about-cta">
-					<button> <?php the_field("about-button-text"); ?></button>
-				</a>
-			</div>
 			</div>
 		</section>
 
@@ -76,6 +78,7 @@ get_header(); ?>
 				</a>
 			</div>
 		</section>
+	</div>
 
 		<section class="home__location">
 			<div class="dark divider row">
@@ -134,18 +137,17 @@ get_header(); ?>
 			</div>
 
 				<div class="row expanded provider-gallery">
-					<div class="row">
+
 					<?php
 						$images = get_field('provider-gallery');
 						if( $images ): ?>
 						<?php foreach( $images as $image ): ?>
-						<div class="column small-12 medium-2">
+						<div class="columns small-12 medium-2">
 							<span class="helper"></span>
 							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 						</div>
 						<?php endforeach; ?>
 						<?php endif; ?>
-				</div>
 			</div>
 		</section>
 

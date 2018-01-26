@@ -6,7 +6,19 @@
  * @since FoundationPress 1.0.0
  */
 
-get_header(); ?>
+get_header();
+$notfoundhead = get_field("notfound-header-image", "option");
+
+if( !empty($notfoundhead) ): ?>
+
+<div class="featured-hero" alt="<?php echo $notfoundhead['alt']; ?>" style="background-image:url('<?php echo $notfoundhead['url']; ?>');">
+hello
+</div>
+
+<?php else: ?>
+	<div class="featured-hero" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/jeff.png');">
+	</div>
+<?php endif; ?>
 
  <div class="main-wrap" role="main">
 	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">

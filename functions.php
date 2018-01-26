@@ -32,7 +32,6 @@ require_once( 'library/class-foundationpress-call-bar-walker.php' );
 require_once( 'library/class-foundationpress-mobile-walker.php' );
 require_once( 'library/class-foundationpress-program-bar-walker.php' );
 require_once( 'library/class-foundationpress-sub-menu-left-walker.php' );
-require_once( 'library/class-foundationpress-sub-menu-bottom-walker.php' );
 
 /** Create widget areas in sidebar and footer */
 require_once( 'library/widget-areas.php' );

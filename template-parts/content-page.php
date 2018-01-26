@@ -1,4 +1,4 @@
-<?php
+row<?php
 /**
  * The default template for displaying page content
  *
@@ -16,14 +16,14 @@
 				while ( have_rows("flexible_content") ) : the_row();
 				if( get_row_layout() == 'standard_row_full_width' ): ?>
 				<section class="grid-container">
-				<div class="grid-x grid-margin-x">
+				<div class="row">
 					<div class='medium-12 columns'><?php the_sub_field('full_width'); ?>
 					</div>
 				</div>
 			</section>
 		<?php elseif( get_row_layout() == 'row_2_cell' ): ?>
 				<section class="grid-container">
-				<div class="grid-x grid-margin-x">
+				<div class="row">
 					<div class='medium-6 columns'><?php the_sub_field('left_column_2'); ?></div>
 					<div class='medium-6 columns'><?php the_sub_field('right_column_2'); ?></div>
 				</div>
@@ -35,7 +35,7 @@
 					<?php
 				elseif( get_row_layout() == 'row_3_cell' ):?>
 				<section class="grid-container">
-					<div class="grid-x grid-margin-x">
+					<div class="row">
 						<div class='medium-4 columns'><?php the_sub_field('left_column_3'); ?></div>
 						<div class='medium-4 columns'><?php the_sub_field('center_column_3'); ?></div>
 						<div class='medium-4 columns'><?php the_sub_field('right_column_3'); ?></div>
@@ -43,7 +43,7 @@
 				</section><?php
 				elseif( get_row_layout() == 'row_4_cell' ): ?>
 				<section class="grid-container">
-				<div class="grid-x grid-margin-x">
+				<div class="row">
 					<div class='medium-3 columns'><?php the_sub_field('left_column_4'); ?></div>
 					<div class='medium-3 columns'><?php the_sub_field('center_left_column_4'); ?></div>
 					<div class='medium-3 columns'><?php the_sub_field('center_right_column_4'); ?></div>
@@ -76,7 +76,7 @@
 		<div class="gallery-title">
 			<?php the_field("gallery-title")?>
 		</div>
-		<div class="gallery grid-x">
+		<div class="gallery row">
 				<?php
 					$images = get_field('image-pack');
 					if( $images ):
