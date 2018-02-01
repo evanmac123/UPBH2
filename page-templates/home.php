@@ -73,7 +73,6 @@ get_header(); ?>
 						<?php  the_field("program-right-title");?>
 					</div>
 					<div class="home__program-link">
-
 							learn more
 					</div>
 				</div>
@@ -198,7 +197,7 @@ get_header(); ?>
 			 					?>
 							</div>
 							<div class="content">
-								<h4 class="title"><?php  the_title();?></h4>
+								<h3 class="title"><?php  the_title();?></h3>
 								<div class="description"><?php  the_excerpt(); ?></div>
 							</div>
 						</div>

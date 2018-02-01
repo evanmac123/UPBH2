@@ -26,8 +26,3 @@ $('.sub-menu-closer').click(function(e) {
   $('.sub-menu-0').slideUp(400);
   $('.opened').removeClass("opened");
 });
-
-$( window ).resize(function() {
-  var $width = $(".top-bar-right").width();
-  //$(".sub-menu-0").width($width);
-});

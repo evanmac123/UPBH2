@@ -225,11 +225,12 @@ ul {
       }
 
       .sub-menu-0 {
-        top: 76px;
+        top: 89px;
         display: none;
         right: auto;
         right: 0;
         float: left;
+        min-height: 250px;
         width: 100%;
         position: absolute;
         background-color: #fefefe;
@@ -250,7 +251,7 @@ ul {
         .sub-menu-items {
           float: left;
           padding: 30px 0;
-          width: 30%;
+          width: 40%;
         }
 
         a {
@@ -330,10 +331,10 @@ ul {
             left: 200px;
             top: -45px;
             width: 250px;
-            height: 200px;
             display: none;
             background-color: $pale-blue;
             padding: 30px;
+            min-height: 250px;
           }
 
           li {

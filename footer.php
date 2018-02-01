@@ -14,7 +14,7 @@
 		<div class="footer-container" data-sticky-footer>
 			<footer class="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<div id="footer-form" class="footer-form">
+			<div id="footer-form" class="footer-form">
 				<div class="header">
 					<div class="divider">
 						contact us
@@ -29,6 +29,9 @@
 				<div class="row upper-footer">
 					<?php dynamic_sidebar( 'upper-footer-widgets' ); ?>
 			  </div>
+				<div class="row social-footer">
+					<?php dynamic_sidebar( 'lower-social-widgets' ); ?>
+			 </div>
 				 <div class="row lower-footer">
 					 <?php dynamic_sidebar( 'lower-footer-widgets' ); ?>
 				</div>

@@ -59,6 +59,16 @@ function foundationpress_sidebar_widgets() {
 	));
 
 	register_sidebar(array(
+		'id' => 'lower-social-widgets',
+		'name' => __( 'Lower Social widgets', 'foundationpress' ),
+		'description' => __( 'Drag info and image to this footer container', 'foundationpress' ),
+		'before_widget' => '<article id="%1$s" class="large-8 large-centered columns widget %2$s">',
+		'after_widget' => '</article>',
+		'before_title' => '<h6>',
+		'after_title' => '</h6>',
+	));
+
+	register_sidebar(array(
 		'id' => 'form-footer-widgets',
 		'name' => __( 'Form Footer widgets', 'foundationpress' ),
 		'description' => __( 'Drag form widgets to this footer container', 'foundationpress' ),
