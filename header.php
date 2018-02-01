@@ -69,6 +69,7 @@
 						</div>
 					</div>
 					<nav class="site-navigation top-bar" role="navigation">
+						<div class="row">
 						<div class="call-bar-right">
 							<?php dynamic_sidebar( 'header-call-number' ); ?>
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/call.png">
@@ -92,6 +93,7 @@
 								<?php foundationpress_program_bar_r(); ?>
 							</div>
 						</div>
+					</div>
 					</nav>
 				</div>
 			</header>

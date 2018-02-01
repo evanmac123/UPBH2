@@ -24,14 +24,13 @@ if( !empty($bloghead) ): ?>
 <div class="featured-hero" alt="<?php echo $bloghead['alt']; ?>" style="background-image:url('<?php echo $bloghead['url']; ?>');">
 </div>
 <?php else: ?>
-	<div class="featured-hero" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/jeff.png');">
+	<div class="featured-hero" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog-back.jpg');">
 	</div>
 <?php endif; ?>
 
 <div class="main-wrap" role="main">
 	<article class="main-content">
 		<div class="news">
-
 				<?php //Run Loop on Posts Tagged News
 				$args = array(
 				'post_type'      => 'post',
@@ -75,7 +74,6 @@ if( !empty($bloghead) ): ?>
 
 		</div>
 	</article>
-	<?php get_sidebar(); ?>
 </div>
 
 <?php get_footer();

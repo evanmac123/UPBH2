@@ -18,22 +18,24 @@ get_header(); ?>
 		</section>
  		<div class="waves-background">
 		<section class="home__about">
+			<div class="dark divider row">
+				about
+			</div>
 			<div class="row">
-				<div class="column large-4">
-					<div class="home__about-image" style="background-image:url('<?php the_field("about-img"); ?>');">
-					</div>
+				<div class="column large-2">
+					<div class="home__about-image-holder">
+						<div class="home__about-image" style="background-image:url('<?php the_field("about-img"); ?>');">
+						</div>
 				</div>
-				<div class="column large-8">
-					<div class="dark divider row">
-						about
-					</div>
-					<h1 class="home__about-headline row">
+				</div>
+				<div class="column large-8 end">
+					<h2 class="home__about-headline ">
 						<?php the_field("about-headline"); ?>
-					</h1>
-					<div class="home__about-paragraph row">
+					</h2>
+					<div class="home__about-paragraph ">
 						<?php the_field("about-paragraph"); ?>
 					</div>
-					<div class="row home__about-button">
+					<div class=" home__about-button">
 					<a href="<?php the_field("about-link"); ?>" class="home__about-cta large-12 large-centered">
 						<button> <?php the_field("about-button-text"); ?></button>
 					</a>
@@ -50,7 +52,7 @@ get_header(); ?>
 				<h2 class="large-centered columns large-8"><?php the_field("program-headline"); ?></h2>
 			</div>
 			<div class="row">
-				<p class="large-centered columns large-8"><?php the_field("program-paragraph"); ?></p>
+				<div class="large-centered columns large-8"><?php the_field("program-paragraph"); ?></div>
 			</div>
 			<div class="row expanded large-collapsed home__program-link-split">
 				<a href="<?php  the_field("program-left-link");?>">
@@ -82,7 +84,7 @@ get_header(); ?>
 
 		<section class="home__location">
 			<div class="dark divider row">
-				location
+				locations
 			</div>
 			<div class="row">
 
@@ -95,7 +97,7 @@ get_header(); ?>
 				$title = get_sub_field('card-title');
 			?>
 			<?php if( $link ): ?>
-				<a class="home__location-item large-4 columns" href="<?php echo $link; ?>">
+				<a class="home__location-item medium-4 columns" href="<?php echo $link; ?>">
 					<div class="home__location-card">
 						<div class="image" style='background-image:url("<?php echo $image ?>")';>
 						</div>
@@ -123,9 +125,9 @@ get_header(); ?>
 					<h2 class="home__insurance-title"> <?php the_field("insurance-title"); ?> </h2>
 				</div>
 				<div class="row">
-					<p class="home__insurance-description">
+					<div class="home__insurance-description">
 						<?php the_field("insurance-paragraph"); ?>
-					</p>
+					</div>
 				</div>
 				<div class="row">
 					<a href="<?php the_field("home-insurance-link"); ?>" class="home__insurance-button large-centered">
@@ -136,18 +138,21 @@ get_header(); ?>
 				</div>
 			</div>
 
-				<div class="row expanded provider-gallery">
-
+				<div class="row provider-gallery expanded hide-for-small">
+					<div class="columns large-12">
+						<div class="row">
 					<?php
 						$images = get_field('provider-gallery');
 						if( $images ): ?>
 						<?php foreach( $images as $image ): ?>
-						<div class="columns small-12 medium-2">
+						<div class="columns medium-2">
 							<span class="helper"></span>
 							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 						</div>
 						<?php endforeach; ?>
 						<?php endif; ?>
+					</div>
+				</div>
 			</div>
 		</section>
 

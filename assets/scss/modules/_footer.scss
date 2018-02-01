@@ -5,7 +5,7 @@
   color: $white;
   padding: 30px 0 0;
   font-size: 0.8em;
-  float:left;
+  float: left;
 }
 
 .footer {
@@ -22,7 +22,7 @@
   }
 
   .footer-form {
-    background-image: url("../images/form-background.png");
+    background-image: url("../images/form-back.jpg");
     padding: 50px 0;
     color: $white;
     background-size: cover;
@@ -34,7 +34,7 @@
     }
 
     .header {
-      z-index: 10;
+      z-index: 1;
       text-align: center;
       color: $white;
       position: relative;
@@ -99,11 +99,6 @@
       color: $white;
     }
 
-    .nf-error-msg,
-    span.ninja-forms-req-symbol {
-      color: $secondary-color;
-    }
-
     textarea {
       box-shadow: none;
       background-color: $white;
@@ -113,20 +108,6 @@
 
     input {
       box-shadow: none;
-    }
-
-    .submit-wrap {
-      input {
-        padding: 10px 60px;
-        transition: all 0.45s;
-        font-weight: 700;
-        background-color: $primary-color;
-        color: $white;
-
-        &:hover {
-          opacity: 0.8;
-        }
-      }
     }
   }
 

@@ -47,7 +47,7 @@
 // ---------
 
 $global-font-size: 16px;
-$global-width: rem-calc(960);
+$global-width: rem-calc(1040);
 $global-lineheight: 1.6;
 $theme-palette: (
   primary: #F9AB80, //orange
@@ -82,6 +82,7 @@ $dark-green: #81C566;
 $light-blue: #6486AB;
 $dark-blue: #00467F;
 $light-brown: #F6F2EF;
+$pale-blue: #EBF0F6;
 
 //transparent+overlays
 $white-transparent: #fefefebf;
@@ -137,18 +138,18 @@ $header-styles: (
   small: (
     'h1': ('font-size': 24),
     'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
+    'h3': ('font-size': 20),
     'h4': ('font-size': 18),
     'h5': ('font-size': 17),
     'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': ('font-size': 24),
+    'h1': ('font-size': 36),
     'h2': ('font-size': 24),
-    'h3': ('font-size': 20),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 16),
-    'h6': ('font-size': 14),
+    'h3': ('font-size': 24),
+    'h4': ('font-size': 20),
+    'h5': ('font-size': 18),
+    'h6': ('font-size': 16),
   ),
 );
 $header-text-rendering: optimizeLegibility;

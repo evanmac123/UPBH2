@@ -79,20 +79,27 @@ function my_wp_nav_menu_objects_start_in( $sorted_menu_items, $args ) {
  * @return string (Maybe) modified "read more" excerpt string.
  */
 function wpdocs_excerpt_more( $more ) {
-    return sprintf( '<div><a class="read-more" href="%1$s">%2$s</a></div>',
+    return sprintf( '...<div><a class="read-more" href="%1$s">%2$s</a></div>',
         get_permalink( get_the_ID() ),
-        __( 'Read More', 'textdomain' )
+        __( 'Learn More', 'textdomain' )
     );
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+//feature images
 add_theme_support( 'post-thumbnails' );
 
-
+//backup options page
 if( function_exists('acf_add_options_page') ) {
-
 	acf_add_options_page();
-
 }
+
+// Filter except length to 35 words.
+// tn custom excerpt length
+function tn_custom_excerpt_length( $length ) {
+return 35;
+}
+add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
 
 
 

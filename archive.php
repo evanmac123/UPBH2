@@ -20,13 +20,13 @@ $bloghead = get_field("blog-header-image", "option");
 
 if( !empty($bloghead) ): ?>
 
-<div class="featured-hero" alt="<?php echo $bloghead['alt']; ?>" style="background-image:url('<?php echo $bloghead['url']; ?>');">
-</div>
+	<div class="featured-hero" alt="<?php echo $bloghead['alt']; ?>" style="background-image:url('<?php echo $bloghead['url']; ?>');">
+	</div>
 <?php else: ?>
 	<div class="featured-hero" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/jeff.png');">
 	</div>
 <?php endif; ?>
-<div class="main-wrap" role="main">
+<div class="main-wrap hello" role="main">
 	<article class="main-content">
 		<div class="news">
 
