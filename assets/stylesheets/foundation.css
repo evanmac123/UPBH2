@@ -7553,7 +7553,7 @@ ul {
         right: auto;
         right: 0;
         float: left;
-        min-height: 250px;
+        height: 250px;
         width: 100%;
         position: absolute;
         background-color: #fefefe;
@@ -7662,17 +7662,16 @@ ul {
             font-size: 1em;
             font-weight: 400; }
         .site-navigation .program-bar-r .top-level .sub-menu-0 .sub-menu-1 {
-          position: absolute;
-          top: 45px; }
+          position: static; }
           .site-navigation .program-bar-r .top-level .sub-menu-0 .sub-menu-1 .sub-menu-items {
             position: absolute;
-            left: 200px;
-            top: -45px;
+            left: 40%;
+            top: 0;
             width: 250px;
             display: none;
             background-color: #EBF0F6;
             padding: 30px;
-            min-height: 250px; }
+            height: 250px; }
           .site-navigation .program-bar-r .top-level .sub-menu-0 .sub-menu-1 li a {
             padding: 0 10px 10px 0;
             border-bottom: none;
@@ -8026,6 +8025,32 @@ div.ms-bullet.ms-bullet-selected {
 .updated {
   margin-bottom: 15px; }
 
+.master-slider a.ms-btn {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #F9AB80;
+  font-weight: 700;
+  color: #fefefe;
+  background-color: #F9AB80;
+  padding: 14px 60px !important;
+  transition: all 0.4s;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  width: unset !important; }
+  .master-slider a.ms-btn:hover {
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    color: #877B77;
+    background-color: #F9AB80; }
+
+.ms-staff-carousel .ms-nav-next,
+.ms-staff-carousel .ms-nav-prev {
+  background-image: url("../images/staff-arrows.png") !important; }
+
+body .footer .footer-form .submit-wrap input {
+  font-size: 14px; }
+
 .nf-form-fields-required,
 .ninja-forms-req-symbol {
   color: #F9AB80;
@@ -8041,6 +8066,9 @@ span.ninja-forms-req-symbol {
 
 .nf-error-required-error {
   position: absolute; }
+
+.nf-form-fields-required {
+  padding: 5px 0; }
 
 .footer-container {
   max-width: 100%;
@@ -8147,13 +8175,6 @@ span.ninja-forms-req-symbol {
   padding: 30px 0;
   width: 100%;
   text-align: center; }
-  .footer .footer-blue .lower-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
   .footer .footer-blue .social-footer article {
     padding: 0; }
   .footer .footer-blue .social-footer .social-tags img {
@@ -8210,7 +8231,7 @@ button {
   transition: all 0.4s;
   cursor: pointer;
   font-weight: 700;
-  font-size: 0.8em;
+  font-size: .8em;
   letter-spacing: 2px;
   text-transform: lowercase; }
   @media screen and (max-width: 63.9375em) {
@@ -8219,7 +8240,7 @@ button {
     button {
       width: 100%;
       padding: 20px 0;
-      font-size: 1.2em; } }
+      font-size: 1.1em; } }
   .button:hover,
   .footer .footer-form .submit-wrap input:hover,
   button:hover {
@@ -8394,7 +8415,7 @@ button {
     color: #877B77;
     display: none; }
   .sidebar-left .sidebar .current-menu-ancestor {
-    display: block;
+    display: inline-block;
     padding: 0;
     text-transform: uppercase; }
     .sidebar-left .sidebar .current-menu-ancestor a {
@@ -8418,7 +8439,8 @@ button {
         padding: 0; }
       .sidebar-left .sidebar .current-menu-ancestor li li a {
         padding: 0.2em;
-        display: block;
+        display: inline-block;
+        text-transform: capitalize;
         border-bottom: 0 solid #877B77; }
   .sidebar-left .sidebar .current-menu-item {
     font-weight: 700; }
@@ -8530,7 +8552,8 @@ button {
 .home .waves-background {
   background-image: url("../images/waves.svg");
   -webkit-background-size: contain;
-          background-size: contain; }
+          background-size: contain;
+  background-repeat: no-repeat; }
 
 .home__about {
   padding: 30px; }

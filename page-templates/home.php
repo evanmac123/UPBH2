@@ -4,7 +4,7 @@ Template Name: Home
 */
 get_header(); ?>
 	<div class="home">
-		<section>
+		<div>
 			<div class="home__slider hide-for-small-only">
 				<?php the_field("main-slider"); ?>
 			</div>
@@ -15,7 +15,7 @@ get_header(); ?>
             <h3 class="home__slider-description-mobile columns small-12" style="text-align: left;">Moving beyond the barriers in Treatment Preparation and Coordination Planning to create better outcomes for our patients.</h3>
           	<a class="columns small-12" href="/university-park/"><button>Getting Started</button></a>
         </div>
-		</section>
+		</div>
  		<div class="waves-background">
 		<section class="home__about">
 			<div class="dark divider row">
@@ -197,7 +197,7 @@ get_header(); ?>
 			 					?>
 							</div>
 							<div class="content">
-								<h3 class="title"><?php  the_title();?></h3>
+								<h2 class="title"><?php  the_title();?></h2>
 								<div class="description"><?php  the_excerpt(); ?></div>
 							</div>
 						</div>

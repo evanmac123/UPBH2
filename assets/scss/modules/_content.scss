@@ -67,6 +67,7 @@
   }
 }
 //home slider bullets
+
 .ms-container {
   .ms-bullets.ms-dir-h {
     right: inherit;
@@ -197,7 +198,38 @@ div.ms-bullet.ms-bullet-selected {
 .updated {
   margin-bottom: 15px;
 }
+//master slider
+.master-slider {
+  a.ms-btn {
+    transition: all 0.4s;
+    background-color: $primary-color;
+    font-weight: 700;
+    color: $white;
+    background-color: $primary-color;
+    padding: 14px 60px !important;
+    transition: all 0.4s;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    width: unset !important;
+
+    &:hover {
+      transition: all 0.4s;
+      color: $secondary-color;
+      background-color: $primary-color;
+    }
+  }
+}
+  .ms-staff-carousel .ms-nav-next,
+  .ms-staff-carousel .ms-nav-prev {
+    background-image:url("../images/staff-arrows.png") !important;
+  }
+
 //forms
+body .footer .footer-form .submit-wrap input {
+  font-size: 14px;
+}
+
 .nf-form-fields-required,
 .ninja-forms-req-symbol {
   color: $primary-color;
@@ -216,4 +248,8 @@ span.ninja-forms-req-symbol {
 
 .nf-error-required-error {
   position: absolute;
+}
+
+.nf-form-fields-required {
+  padding: 5px 0;
 }

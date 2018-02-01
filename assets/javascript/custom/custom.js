@@ -7,11 +7,11 @@ $('.opener').click(function(e) {
     e.preventDefault();
 
     if ($this.hasClass("opened")) {
-      $('.sub-menu').slideUp(400);
+      $this.find('.sub-menu').slideUp(400);
       $this.removeClass("opened");
     } else {
       $('.opened').removeClass("opened");
-      $('.sub-menu-0').slideUp(400);
+      $this.find('.sub-menu-0').slideUp(400);
       $this.children('.sub-menu-0').delay(400).slideDown("slow");
       $this.addClass("opened");
     }

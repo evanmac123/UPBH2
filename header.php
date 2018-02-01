@@ -59,7 +59,7 @@
 	  									the_custom_logo();
 	  						   }
 	                 else { ?>
-	  							 <img src="http://upbh2/wp-content/uploads/2018/01/logo-main-1.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" />
+	  							 <img width="190" src="http://upbh2/wp-content/uploads/2018/01/logo-main-1.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" />
 	               <?php } ?>
 							</a>
 						</div>

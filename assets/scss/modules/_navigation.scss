@@ -230,7 +230,7 @@ ul {
         right: auto;
         right: 0;
         float: left;
-        min-height: 250px;
+        height: 250px;
         width: 100%;
         position: absolute;
         background-color: #fefefe;
@@ -323,18 +323,17 @@ ul {
         }
 
         .sub-menu-1 {
-          position: absolute;
-          top: 45px;
+          position: static;
 
           .sub-menu-items {
             position: absolute;
-            left: 200px;
-            top: -45px;
+            left: 40%;
+            top: 0;
             width: 250px;
             display: none;
             background-color: $pale-blue;
             padding: 30px;
-            min-height: 250px;
+            height: 250px;
           }
 
           li {

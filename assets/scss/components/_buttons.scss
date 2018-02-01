@@ -7,13 +7,13 @@ button {
   transition: all 0.4s;
   cursor: pointer;
   font-weight: 700;
-  font-size: 0.8em;
+  font-size: .8em;
   letter-spacing: 2px;
   text-transform: lowercase;
   @include breakpoint(medium down) {
     width: 100%;
     padding: 20px 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   &:hover {

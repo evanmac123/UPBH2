@@ -62,7 +62,7 @@ function foundationpress_sidebar_widgets() {
 		'id' => 'lower-social-widgets',
 		'name' => __( 'Lower Social widgets', 'foundationpress' ),
 		'description' => __( 'Drag info and image to this footer container', 'foundationpress' ),
-		'before_widget' => '<article id="%1$s" class="large-8 large-centered columns widget %2$s">',
+		'before_widget' => '<article id="%1$s" class=" small-12 columns widget %2$s">',
 		'after_widget' => '</article>',
 		'before_title' => '<h6>',
 		'after_title' => '</h6>',
