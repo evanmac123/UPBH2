@@ -22,25 +22,25 @@ get_header(); ?>
 				about
 			</div>
 			<div class="row">
-				<div class="column large-2">
+				<div class="columns large-4">
 					<div class="home__about-image-holder">
 						<div class="home__about-image" style="background-image:url('<?php the_field("about-img"); ?>');">
 						</div>
 				</div>
 				</div>
-				<div class="column large-8 end">
+				<div class="columns large-8">
 					<h2 class="home__about-headline ">
 						<?php the_field("about-headline"); ?>
 					</h2>
 					<div class="home__about-paragraph ">
 						<?php the_field("about-paragraph"); ?>
 					</div>
-					<div class=" home__about-button">
-					<a href="<?php the_field("about-link"); ?>" class="home__about-cta large-12 large-centered">
-						<button> <?php the_field("about-button-text"); ?></button>
-					</a>
-					</div>
 				</div>
+			</div>
+			<div class=" home__about-button">
+			<a href="<?php the_field("about-link"); ?>" class="home__about-cta large-12 large-centered">
+				<button> <?php the_field("about-button-text"); ?></button>
+			</a>
 			</div>
 		</section>
 

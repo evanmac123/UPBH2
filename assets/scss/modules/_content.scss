@@ -117,10 +117,17 @@
 
       .description {
         font-size: 1em;
+        p{
+          height: 108px;
+          overflow: hidden;
+        }
       }
 
       .read-more {
         font-weight: 700;
+        @include breakpoint(medium down) {
+          display:none;
+        }
       }
     }
   }
