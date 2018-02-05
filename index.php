@@ -21,7 +21,7 @@ $bloghead = get_field("blog-header-image", "option");
 
 if( !empty($bloghead) ): ?>
 
-<div class="featured-hero" alt="<?php echo $bloghead['alt']; ?>" style="background-image:url('<?php echo $bloghead['url']; ?>');">
+<div class="featured-hero" style="background-image:url('<?php echo $bloghead; ?>');">
 </div>
 <?php else: ?>
 	<div class="featured-hero" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog-back.jpg');">
