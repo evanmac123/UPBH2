@@ -8,7 +8,7 @@
   @include hide-for(large);
 }
 
-,
+
 .desktop-menu,
 .site-navigation,
 .top-bar-left {
@@ -101,11 +101,12 @@ ul {
   position: fixed;
   left: 0;
   z-index: 100;
+  padding: 0;
 
   .top-bar {
     float: left;
     width: 100%;
-    padding: 0 0 20px 0;
+    padding: 0;
   }
 
   .top-bar-title {
@@ -199,6 +200,8 @@ ul {
       align-items: flex-end;
       justify-content: center;
       height: 50px;
+      margin-top: 30px;
+      padding-bottom: 30px;
 
       &.opened a,
       &:hover a {
@@ -217,6 +220,14 @@ ul {
         }
       }
 
+    &:hover .sub-menu-0 {
+      max-height: 450px;
+      transition: .4s all;
+      opacity: 1;
+      visibility: visible;
+
+    }
+
       a {
         color: $white;
         transition: 0.45s all;
@@ -225,28 +236,27 @@ ul {
       }
 
       .sub-menu-0 {
-        top: 89px;
-        display: none;
+        top: 80px;
+        opacity:0;
+        visibility: hidden;
         right: auto;
-        right: 0;
         float: left;
-        height: 250px;
+        left: 0;
         width: 100%;
         position: absolute;
         background-color: #fefefe;
         color: #877B77;
         z-index: 6;
         text-align: left;
-        -webkit-background-size: cover;
         background-color: $white;
         color: $secondary-color;
         z-index: 6;
         margin-left: 0;
         text-align: left;
-        background-size: cover;
         -webkit-box-shadow: $dropshadow;
         -moz-box-shadow: $dropshadow;
         box-shadow: $dropshadow;
+        transition: .4s all;
 
         .sub-menu-items {
           float: left;
@@ -286,6 +296,7 @@ ul {
 
         .sub-menu-closer {
           @include grid-column(2);
+          display:none;
           cursor: pointer;
           float: left;
           width: 20px;
@@ -333,7 +344,7 @@ ul {
             display: none;
             background-color: $pale-blue;
             padding: 30px;
-            height: 250px;
+            height: 100%;
           }
 
           li {

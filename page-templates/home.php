@@ -11,9 +11,9 @@ get_header(); ?>
         <div class="home__slider show-for-small-only row">
             <div class="ms-slide-bgcont" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-back.png');">
 						</div>
-            <h2 class="home-slider-heading-mobile columns small-12">New Perspectives</h2>
-            <h3 class="home__slider-description-mobile columns small-12" style="text-align: left;">Moving beyond the barriers in Treatment Preparation and Coordination Planning to create better outcomes for our patients.</h3>
-          	<a class="columns small-12" href="/university-park/"><button>Getting Started</button></a>
+            <h2 class="home-slider-heading-mobile columns small-12"><?php the_field("mobile-main-slider-title"); ?></h2>
+            <h3 class="home__slider-description-mobile columns small-12" style="text-align: left;"><?php the_field("mobile-main-slider-description"); ?></h3>
+          	<a class="columns small-12" href="<?php the_field("mobile-main-slider-link"); ?>"><button>Getting Started</button></a>
         </div>
 		</div>
  		<div class="waves-background">
@@ -61,6 +61,9 @@ get_header(); ?>
 					<div class=home__program-title>
 						<?php  the_field("program-left-title");?>
 					</div>
+					<div class="home__program-description">
+						<?php  the_field("program-left-description");?>
+					</div>
 					<div class="home__program-link">
 							learn more
 					</div>
@@ -71,6 +74,9 @@ get_header(); ?>
 					<img class="home__program-icon" src="<?php the_field("program-right-icon");?>">
 					<div class="home__program-title">
 						<?php  the_field("program-right-title");?>
+					</div>
+					<div class="home__program-description">
+						<?php  the_field("program-right-description");?>
 					</div>
 					<div class="home__program-link">
 							learn more
@@ -137,7 +143,7 @@ get_header(); ?>
 				</div>
 			</div>
 
-				<div class="row provider-gallery expanded hide-for-small">
+				<div class="row provider-gallery expanded show-for-medium-up">
 					<div class="columns large-12">
 						<div class="row">
 					<?php
@@ -178,7 +184,7 @@ get_header(); ?>
 					);
 					$posts_array = get_posts( $args ); ?>
 					<?php foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
-					<a href="the_permalink();">
+					<a href="<?php echo the_permalink(); ?>">
 						<div class="card">
 							<?php //grabbing all content
 							$image = get_the_post_thumbnail_url();

@@ -28,6 +28,9 @@
       display: inline-block;
       padding: 0;
       text-transform: uppercase;
+      &:nth-of-type(n+4) {
+        display:none;
+      }
 
       a {
         //top level
@@ -61,7 +64,6 @@
 
         li a {
           //third level
-          padding: 0.2em;
           display: inline-block;
           text-transform: capitalize;
           border-bottom: 0 solid $secondary-color;

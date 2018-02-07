@@ -1,6 +1,7 @@
 jQuery(document);
 
 //Menu opening and closing
+/*
 $('.opener').click(function(e) {
   var $this = $(this).parent();
   if($this.find('.sub-menu-0').length !== 0){
@@ -26,3 +27,4 @@ $('.sub-menu-closer').click(function(e) {
   $('.sub-menu-0').slideUp(400);
   $('.opened').removeClass("opened");
 });
+*/

@@ -46,10 +46,15 @@ a {
     width: 89px;
     height: 2px;
     content: "";
+    background-size: cover;
     display: inline-block;
     position: relative;
     left: -1em;
     top: -3px;
+    @include breakpoint(xlarge down) {
+      width: 70px;
+      height: 1px;
+    }
   }
 
   &:after {
@@ -57,10 +62,15 @@ a {
     width: 89px;
     height: 2px;
     content: "";
+    background-size: cover;
     display: inline-block;
     position: relative;
     right: -1em;
     top: -3px;
+    @include breakpoint(xlarge down) {
+      width: 70px;
+      height: 1px;
+    }
   }
 }
 
