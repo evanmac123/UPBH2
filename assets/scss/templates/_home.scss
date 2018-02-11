@@ -141,6 +141,9 @@
     &-icon {
       width: 107px;
       margin: 90px auto 0;
+      @include breakpoint(medium down) {
+        margin: 30px auto 0;
+      }
     }
 
     &-title {
@@ -284,6 +287,11 @@
   &__blog {
 
     margin-top: 30px;
+    .news{
+      .card {
+        height: auto;
+      }
+    }
 
     //news is in content
     .university-park {

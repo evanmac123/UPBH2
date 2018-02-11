@@ -7939,12 +7939,14 @@ ul {
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
   border: 0;
-  height: 470px;
+  height: 490px;
   background-color: #F6F2EF; }
   .news .card:hover .read-more {
     color: #F9AB80;
     -webkit-transition: 0.4s all;
     transition: 0.4s all; }
+  .news .card h2 {
+    text-align: left; }
   .news .card .post-image {
     height: 191px;
     width: 100%;
@@ -8177,8 +8179,7 @@ span.ninja-forms-req-symbol {
     -webkit-box-shadow: none;
             box-shadow: none;
     background-color: #fefefebf;
-    color: #0a0a09;
-    border: 1px #fefefe solid; }
+    color: #0a0a09; }
   .footer .footer-form input {
     -webkit-box-shadow: none;
             box-shadow: none; }
@@ -8441,8 +8442,6 @@ button {
     display: inline-block;
     padding: 0;
     text-transform: uppercase; }
-    .sidebar-left .sidebar .current-menu-ancestor:nth-of-type(n+4) {
-      display: none; }
     .sidebar-left .sidebar .current-menu-ancestor a {
       display: none; }
     .sidebar-left .sidebar .current-menu-ancestor ul {
@@ -8645,6 +8644,9 @@ button {
 .home__program-icon {
   width: 107px;
   margin: 90px auto 0; }
+  @media screen and (max-width: 63.9375em) {
+    .home__program-icon {
+      margin: 30px auto 0; } }
 
 .home__program-title {
   text-align: center;
@@ -8753,6 +8755,8 @@ button {
 
 .home__blog {
   margin-top: 30px; }
+  .home__blog .news .card {
+    height: auto; }
   .home__blog .university-park {
     text-align: center; }
     .home__blog .university-park .date,

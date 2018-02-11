@@ -89,7 +89,7 @@
   .card {
     transition: 0.4s all;
     border: 0;
-    height: 470px;
+    height: 490px;
     background-color: $light-brown;
 
     &:hover {
@@ -97,6 +97,10 @@
         color: $primary-color;
         transition: 0.4s all;
       }
+    }
+
+    h2 {
+      text-align: left;
     }
 
     .post-image {
