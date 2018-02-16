@@ -50,7 +50,7 @@
 			<?php do_action( 'foundationpress_layout_start' ); ?>
 			<header class="site-header" role="banner">
 				<div class="site-title-bar show-for-small show-for-medium-up">
-					<div class="mobile-bar" data-toggle="<?php foundationpress_mobile_menu_id();?>">
+					<div class="mobile-bar">
 						<div class="mobile-bar__left">
 	            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 	              <?php
@@ -64,8 +64,8 @@
 							</a>
 						</div>
 						<div class="mobile-bar__right">
-							<img  class="call"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/call.png">
-							<div class="menu-icon"></div>
+                            <a href="tel:866-787-6699"><img  class="call"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/call.png"></a>
+							<div class="menu-icon" data-toggle="<?php foundationpress_mobile_menu_id();?>"></div>
 						</div>
 					</div>
 					<nav class="site-navigation top-bar" role="navigation">
@@ -84,7 +84,7 @@
                         the_custom_logo();
                      }
                      else { ?>
-                     <img width="558" height="130" src="http://upbh2/wp-content/uploads/2018/01/logo-main-1.png" class="custom-logo" itemprop="logo" />
+                     <img width="558" height="130" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-main1.png" class="custom-logo" itemprop="logo" />
                    <?php } ?>
                 </a>
 							</div>

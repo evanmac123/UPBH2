@@ -73,7 +73,7 @@
   }
 
   &__about {
-    padding: 30px;
+    padding: 0px;
     h2{
       text-align: left;
       @include breakpoint(medium down) {
@@ -101,6 +101,8 @@
 
     &-button {
         text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     button {
@@ -121,6 +123,9 @@
       position: relative;
       color: white;
       z-index: 1;
+      @include breakpoint(small down) {
+        height: 550px;
+      }
 
       &:hover {
         color: $dark-blue;

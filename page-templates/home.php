@@ -13,7 +13,7 @@ get_header(); ?>
 						</div>
             <h2 class="home-slider-heading-mobile columns small-12"><?php the_field("mobile-main-slider-title"); ?></h2>
             <h3 class="home__slider-description-mobile columns small-12" style="text-align: left;"><?php the_field("mobile-main-slider-description"); ?></h3>
-          	<a class="columns small-12" href="<?php the_field("mobile-main-slider-link"); ?>"><button>Getting Started</button></a>
+          	<a class="columns small-12" href="<?php the_field("mobile-main-slider-link"); ?>"><button><?php the_field("mobile-main-slider-button"); ?></button></a>
         </div>
 		</div>
  		<div class="waves-background">
@@ -135,7 +135,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="row">
-					<a href="<?php the_field("home-insurance-link"); ?>" class="home__insurance-button large-centered">
+					<a href="<?php the_field("insurance-link"); ?>" class="home__insurance-button large-centered">
 						<button>
 							verify insurance
 						</button>

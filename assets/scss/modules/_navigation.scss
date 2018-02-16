@@ -52,7 +52,7 @@
 
   h6 {
     float: right;
-    font-size: 1em;
+    font-size: 1.6em;
     font-weight: 700;
     color: $light-green;
     padding: 5px 0 0 10px;
@@ -222,7 +222,7 @@ ul {
 
     &:hover .sub-menu-0 {
       max-height: 450px;
-      transition: .4s all;
+      transition: 0s all;
       opacity: 1;
       visibility: visible;
 
@@ -230,7 +230,7 @@ ul {
 
       a {
         color: $white;
-        transition: 0.45s all;
+        transition: 0s all;
         width: 100%;
         position: relative;
       }
@@ -256,7 +256,7 @@ ul {
         -webkit-box-shadow: $dropshadow;
         -moz-box-shadow: $dropshadow;
         box-shadow: $dropshadow;
-        transition: .4s all;
+        transition: 0s all;
 
         .sub-menu-items {
           float: left;
@@ -308,8 +308,8 @@ ul {
           -webkit-background-size: contain;
           background-size: contain;
           background-image: url("../images/close.png");
-          -webkit-transition: all 0.45s;
-          transition: all 0.45s;
+          -webkit-transition: all 0s;
+          transition: all 0s;
 
           &:hover {
             opacity: 1;
@@ -480,7 +480,7 @@ ul {
 .nav-previous {
   float: left;
   padding: 20px 0;
-  transition: all 0.45s;
+  transition: all 0s;
   max-width: 300px;
   font-weight: 700;
 
@@ -498,7 +498,7 @@ ul {
 .nav-next {
   padding: 20px 0;
   float: right;
-  transition: all 0.45s;
+  transition: all 0s;
   max-width: 300px;
   text-align: right;
   font-weight: 700;
