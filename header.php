@@ -42,7 +42,6 @@
 
 		<?php do_action( 'foundationpress_after_body' ); ?>
 
-
 		<div class="off-canvas-wrapper">
 			<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
 
