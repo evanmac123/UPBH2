@@ -22,7 +22,7 @@
       display: block;
       background-size: cover;
       @include overlay;
-
+        
       &:after {
         background-color: $brown-transparent;
       }
@@ -32,11 +32,19 @@
       }
     }
 
-    .home-slider-heading {
+    &-heading {
       font-family: $body-font-family;
-      font-size: 48px;
+      font-size: 2.5em;
       text-align: left;
-      line-height: 1.15;
+      font-weight: bold;
+      line-height: 1.2;
+      color: $white;
+      margin: 1.2em 0;
+      text-transform: uppercase;
+    }
+      
+    &-description {
+      color: $white;
     }
 
     .home-slider-heading-mobile {
@@ -44,13 +52,13 @@
       font-size: 33px;
       color: $light-blue;
       text-align: left;
-      line-height: 1.5;
+      line-height: 1.2;
       margin-top: 20px;
       font-weight: 700;
       text-transform: uppercase;
     }
 
-    .home__slider-description-mobile {
+    .home-slider-description-mobile {
       line-height: 1.5;
       color: $secondary-color;
       margin: 0;
@@ -101,15 +109,42 @@
 
     &-button {
         text-align: center;
-        padding-left: 30px;
-        padding-right: 30px;
+        width: 100%;
     }
 
-    button {
-      margin-top: 30px;
+    a button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px 0px;
     }
   }
 
+  &__quote {
+      p {
+        color: $light-blue;
+        font-style: italic;
+        font-family: $secondary-font-family;
+      }
+
+      h3 {
+        font-family: $body-font-family;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.2em;
+        margin-top: 80px;
+      }
+      
+      h3:after {
+        background: none repeat scroll 0 0 #E1E7EE;
+        bottom: -10px;
+        content: "";
+        display: block;
+        height: 2px;
+        position: relative;
+        width: 50px;
+ }
+  }
+    
   &__program {
     &-link-split {
       margin-top: 60px;

@@ -34,7 +34,7 @@
 				a.src = g;
 				m.parentNode.insertBefore(a, m)
 			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-			ga('create', 'UA-39767596-1', 'auto');
+			ga('create', 'UA-101236212-1', 'auto');
 			ga('require', 'displayfeatures');
 			ga('send', 'pageview');
 		</script>
@@ -64,7 +64,7 @@
 							</a>
 						</div>
 						<div class="mobile-bar__right">
-                            <a href="tel:866-787-6699"><img  class="call"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/call.png"></a>
+                            <a href="tel:800-203-8249"><img  class="call"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/call.png"></a>
 							<div class="menu-icon" data-toggle="<?php foundationpress_mobile_menu_id();?>"></div>
 						</div>
 					</div>

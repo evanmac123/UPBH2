@@ -58,8 +58,6 @@ if( !empty($bloghead) ): ?>
 						<div class="author-bar">
 							<?php
 								the_date();
-								echo " by ";
-								the_author();
 							?>
 						</div>
 						<div class="content">
