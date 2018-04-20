@@ -238,6 +238,17 @@ gulp.task('clean:css', function() {
     ]);
 });
 
+// Copy to WP Testing Installation
+gulp.task('copytotest', function() {
+  gulp.src(PATHS.pkg)
+    .pipe(gulp.dest('/xampp/htdocs/testing/wp-content/themes/upbh'));
+});
+
+// Build and copy to WP Testing Installation
+gulp.task('themetest', function() {
+  sequence('build', 'copytotest');
+});
+
 // Default gulp task
 // Run build task and watch for file changes
 gulp.task('default', ['build', 'browser-sync'], function() {
