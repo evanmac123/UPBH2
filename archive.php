@@ -28,6 +28,7 @@ if( !empty($bloghead) ): ?>
 <?php endif; ?>
 <div class="main-wrap hello" role="main">
 	<article class="main-content">
+		<h1><?php single_cat_title()?></h1>
 		<div class="news">
 
 				<?php //Run Loop on Posts Tagged News
@@ -62,7 +63,7 @@ if( !empty($bloghead) ): ?>
 							?>
 						</div>
 						<div class="content">
-							<h4 class="title"><?php  the_title();?></h4>
+							<h2 class="title" style="font-size: 1.25rem;"><?php  the_title();?></h2>
 							<div class="description"><?php  the_excerpt(); ?></div>
 						</div>
 					</div>

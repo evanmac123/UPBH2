@@ -29,6 +29,7 @@ if( !empty($bloghead) ): ?>
 <?php endif; ?>
 
 <div class="main-wrap" role="main">
+	<h1>Treatment Blog</h1>
 	<article class="main-content">
 		<div class="news">
 				<?php //Run Loop on Posts Tagged News

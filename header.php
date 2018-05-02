@@ -76,16 +76,16 @@
 
 						<div class="top-bar">
 							<div class="site-desktop-title top-bar-left">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+
                   <?php
                      // Display the Custom Logo, default logo, or the site's name
                      if ( has_custom_logo() ) {
                         the_custom_logo();
                      }
                      else { ?>
-                     <img width="558" height="130" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-main1.png" class="custom-logo" itemprop="logo" />
+										 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                     <img width="558" height="130" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-main1.png" class="custom-logo" itemprop="logo" /></a>
                    <?php } ?>
-                </a>
 							</div>
 
 							<div class="top-bar-right">

@@ -70,7 +70,7 @@ get_header(); ?>
                 </div>
                 <div class="row expanded large-collapsed home__program-link-split"> <a href="<?php  the_field(" program-left-link ");?>">
 				<div class="home__program-block large-6 column" style="background-image:url('<?php  the_field("program-left-background");?>')">
-					<img class="home__program-icon" src="<?php the_field("program-left-icon");?>">
+					<img class="home__program-icon" alt="Icon of magnifying glass detailing vital signs" src="<?php the_field("program-left-icon");?>">
 					<div class=home__program-title>
 						<?php  the_field("program-left-title");?>
 					</div>
@@ -83,7 +83,7 @@ get_header(); ?>
 				</div>
 				</a> <a href="<?php  the_field(" program-right-link ");?>">
 				<div class="home__program-block large-6 column" style="background-image:url('<?php  the_field("program-right-background");?>')">
-					<img class="home__program-icon" src="<?php the_field("program-right-icon");?>">
+					<img class="home__program-icon" alt="Icon of person under roof" src="<?php the_field("program-right-icon");?>">
 					<div class="home__program-title">
 						<?php  the_field("program-right-title");?>
 					</div>
@@ -238,7 +238,7 @@ get_header(); ?>
                                         <?php endforeach;
 						 		wp_reset_postdata(); ?>
                             </div>
-                            <div class="recognized-by row"> <img class="columns large-12" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/recognized.png"> </div>
+                            <div class="recognized-by row"> <img class="columns large-12" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/recognized.png" alt="Logos of organizations that recognize Lakeview"> </div>
                         </div>
                     </div>
                 </div>
