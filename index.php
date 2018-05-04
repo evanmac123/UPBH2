@@ -62,7 +62,7 @@ if( !empty($bloghead) ): ?>
 							?>
 						</div>
 						<div class="content">
-							<h4 class="title"><?php  the_title();?></h4>
+							<h2 class="title" style="font-size: 1.25rem;"><?php  the_title();?></h2>
 							<div class="description"><?php  the_excerpt(); ?></div>
 						</div>
 					</div>

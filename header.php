@@ -51,19 +51,13 @@
 				<div class="site-title-bar show-for-small show-for-medium-up">
 					<div class="mobile-bar">
 						<div class="mobile-bar__left">
-	            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-	              <?php
-	  					     // Display the Custom Logo, default logo, or the site's name
-	  					     if ( has_custom_logo() ) {
-	  									the_custom_logo();
-	  						   }
-	                 else { ?>
-	  							 <img width="190" src="http://upbh2/wp-content/uploads/2018/01/logo-main-1.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" />
-	               <?php } ?>
-							</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+	  							<img width="190" src="https://universityparkbh.com/wp-content/uploads/2018/01/logo-main.png" class="custom-logo" alt="University Park logo" itemprop="logo" />
+									<p style="font-size:0;">University Park Behavioral Health</p>
+								</a>
 						</div>
 						<div class="mobile-bar__right">
-                            <a href="tel:800-203-8249"><img  class="call"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/call.png"></a>
+                            <a href="tel:800-203-8249"><img  class="call"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/call.png" alt="Phone icon"></a>
 							<div class="menu-icon" data-toggle="<?php foundationpress_mobile_menu_id();?>"></div>
 						</div>
 					</div>
@@ -71,21 +65,15 @@
 						<div class="row">
 						<div class="call-bar-right">
 							<?php dynamic_sidebar( 'header-call-number' ); ?>
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/call.png">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/call.png" alt="Phone icon">
 						</div>
 
 						<div class="top-bar">
 							<div class="site-desktop-title top-bar-left">
-
-                  <?php
-                     // Display the Custom Logo, default logo, or the site's name
-                     if ( has_custom_logo() ) {
-                        the_custom_logo();
-                     }
-                     else { ?>
-										 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                     <img width="558" height="130" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-main1.png" class="custom-logo" itemprop="logo" /></a>
-                   <?php } ?>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+	  							<img width="340" height="80" src="https://universityparkbh.com/wp-content/uploads/2018/01/logo-main.png" class="custom-logo" alt="University Park logo" itemprop="logo" />
+									<p style="font-size:0;">University Park Behavioral Health</p>
+								</a>
 							</div>
 
 							<div class="top-bar-right">

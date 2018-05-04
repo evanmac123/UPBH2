@@ -24,9 +24,9 @@ get_header(); ?>
                 <div class="dark divider row"> about </div>
                 <div class="row">
                     <div class="columns large-6 large-offset-1">
-                       <h2 class="home__about-headline ">
+                       <h1 class="home__about-headline ">
 				            <?php the_field("about-headline"); ?>
-					   </h2>
+					   </h1>
                         <div class="home__about-paragraph">
                             <?php the_field("about-paragraph"); ?>
                         </div>
